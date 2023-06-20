@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css"> -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <link href="../assets/css/css/all.css" rel="stylesheet">
+    <link href="../assets/css/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <script src="../assets/js/js/all.js"></script>
+    <script src="../assets/js/js/bootstrap.bundle.min.js"></script>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <script src="../assets/js/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="../assets/fonts/font awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/styles/fonts-face/kalameh/font-face.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/sslick-theme.css">
+    <title>Main</title>
+</head>
+<body>
+    <!-- Header -->
+      <nav class='flex justify-center py-[10px] sm:py-4 font-[500]'>
+        <div class='grid w-5/6 grid-cols-12 gap-1 '>
+            <a href='' class='col-span-2 lg:col-span-1 flex items-center '>
+                <img class='w-[60px] sm:w-[70px]' src='../assets/images/test4k-logo.png' alt="" />
+            </a>
+            <ul class='hidden lg:flex col-span-7 lg:col-span-9 xl:col-span-8 flex-wrap gap-4 items-center justify-start ps-3'>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine ' href='index.html'>صفحه اصلی</a>
+                </li>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine'  href='store.html'>فروشگاه</a>
+                </li>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine'  href='news.html'>مجله خبری</a>
+                </li>
+                <li>
+                    <a href="#introduction" class='hover:text-pinkColor hoverBottomLine'  >معرفی سامانه</a>
+                </li>
+                <li>
+                    <a href="#aboutUs" class='hover:text-pinkColor hoverBottomLine' >درباره ما</a>
+                </li>
+            </ul>
+            <div class='hidden lg:flex lg:col-span-2 xl:col-span-3  justify-end font-normal'>
+                <div class='flex w-fit justify-between items-center gap-2'>
+                <a href="cart.html" class='rounded-[8px] h-[38px] w-[38px] relative bg-[#F4F4FC] flex items-center justify-center cartButton'>
+                    <span class='bg-pinkColor absolute bottom-1 right-1 pt-1 text-[11px] rounded-full w-[18px] h-[18px] text-white flex items-center justify-center'>3</span>
+                    <img class='h-[20px]' src='../assets/icons/basket.png' alt="" />
+                </a>
+                <div class='rounded-[8px] border-1 border-[#888793] w-[140px] h-[38px] flex justify-center items-center'>
+                    <div class='flex justify-between gap-[5px]'>
+                        <img class='w-[17px]' src='../assets/icons/user.png' alt="" />
+                        <a href="login.html" class='bLButton hover:text-pinkColor'>ورود</a>
+                        <a href="signup.html" class=' hover:text-pinkColor'>عضویت</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class='col-span-10 w-full relative'>
+                <div class='lg:hidden'>
+                    <div class='text-left rounded-t-md'>
+                    <button class='h-12 flex items-start rounded-t-md pt-[10px] justify-end w-full' id="toggleBtn">
+                        <img id="hamburgur" class="w-7 object-contain transition-all" src="../assets/icons/hamburgur.png" alt="">
+                        <img id="close" class="hidden w-5 object-contain transition-all" src="../assets/icons/close.png" alt="">
+                    </button>
+                    </div>
+                <div class='menu right-2 w-full rounded-b-md hidden' id="myDiv">
+                    <ul class="flex flex-col">
+                        <li class="flex ps-[6px] py-[10px] bg-gray-50">
+                            <img class="w-4 pe-[4px] object-contain" src="../assets/icons/user.png" alt="">
+                            <a class='hover:text-pinkColor bLButton ' href="login.html">ورود</a>
+                            <a class='hover:text-pinkColor ps-[5px]' href="signup.html">عضویت</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href='index.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>صفحه اصلی</a>
+                            <a href='store.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>فروشگاه</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href='news.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>مجله خبری</a>
+                        <a href="" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >معرفی سامانه</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href="#aboutUs" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >درباره ما</a>
+                            <a href="cart.html" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >سبد خرید</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- carousel -->
+    <section>
+   <div id="demo" class="carousel slide slider-rel carousel-reboot relative" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active d-flex align-items-center relative">
+        <div class="absolute bg-opacity-carousel top-0 right-0 w-full h-full">x</div>
+        <img class="w-full h-64 lg:h-[500px] object-cover" src="../assets/images/carousel-img.png">
+        <div class="carousel-caption w-full right-0 h-full top-3 lg:top-24">
+            <h4 class="mb-3 font-semibold text-lg md:text-2xl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h4>
+            <p class="">کتابهای زیادی در گذشته، حال و آینده شناخت فراوان جامعه را می طلبد </p>
+        </div>
+      </div>
+      <div class="carousel-item relative">
+        <div class="absolute bg-opacity-carousel top-0 right-0 w-full h-full">x</div>
+        <img class="w-full h-64 lg:h-[500px] object-cover" src="../assets/images/female-journalist.png">
+        <div class="carousel-caption w-full right-0 h-full top-3 lg:top-24">
+            <h4 class="mb-3 font-semibold  text-lg md:text-2xl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h4>
+            <p class="font-light">کتابهای زیادی در گذشته، حال و آینده شناخت فراوان جامعه را می طلبد </p>
+        </div>
+      </div>
+      <div class="carousel-item relative">
+        <div class="absolute bg-opacity-carousel top-0 right-0 w-full h-full">x</div>
+        <img class="w-full h-64 lg:h-[500px] object-cover" src="../assets/images/reading-book.png">
+        <div class="carousel-caption w-full right-0 h-full top-3 lg:top-24">
+            <h4 class="mb-3 font-semibold  text-lg md:text-2xl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h4>
+            <p class="font-light">کتابهای زیادی در گذشته، حال و آینده شناخت فراوان جامعه را می طلبد </p>
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev z-40" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="nxt-prev-btn"><span class="carousel-control-prev-icon" aria-hidden="true"></span></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next z-40" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="nxt-prev-btn"><span class="carousel-control-next-icon" aria-hidden="true"></span></span>
+      <span class="sr-only">Next</span>
+    </button>
+    <div class="absolute w-full h-full top-0 right-0 z-20 text-white">
+        <div class="h-full flex justify-center items-center">
+        <div class="text-center w-4/5 md:w-3/5 lg:w-1/2 mt-24 lg:mt-[170px]">
+        <div class="px-1 bg-white h-[40px] lg:h-12 rounded-[30px] flex">
+            <select class=" bg-white lg:col-span-2 text-textBlackColor text-[12px] outline-none w-[90px] lg:w-[95px] rounded-r-[30px] cursor-pointer" name="" id="">
+                <option class="" value="دسته بندی 1">دسته‌بندی‌ها</option>
+                <option value="دسته بندی 2">عنوان دسته بندی</option>
+                <option value="دسته بندی 3">عنوان دسته بندی</option>
+            </select>
+            <form class="col-span-8 lg:col-span-10 bg-white rounded-full flex justify-around sm:justify-between w-full items-center overflow-hidden">
+                <img class="w-[15px] md:w-[22px] object-contain ms-1" src='../assets/icons/search.png' alt="">
+                <input placeholder="دنبال چی هستی؟" class="lg:w-4/5 w-10/12 outline-none rounded-l-full h-full text-black px-1 text-[12px] md:text-sm" type="text" />
+                <button class="w-[70px] text-[12px] md:text-sm lg:w-1/5 h-[30px] lg:h-[40px] bg-pinkColor rounded-[25px] buttonClick">جستجو</button>
+            </form>
+        </div>
+        <div class="hidden lg:flex justify-center mt-5">
+            <ul class="bg-[#1F2B26] bg-opacity-70 rounded-[5px] w-[95%] lg:h-[120px] grid grid-cols-12 px-2 items-center">
+                <li class="col-span-3 flex flex-col items-center">
+                    <img class="mx-auto w-[32px]" src='../assets/icons/banner-judge.png' alt="">
+                    <span class="text-[13px]">بیش از 200 تست</span>
+                </li>
+                <li class="col-span-3 flex flex-col items-center">
+                    <img class="mx-auto w-[32px]" src='../assets/icons/banner-clock.png' alt="">
+                    <span class="text-[13px]">دسترسی مادام العمر</span>
+                </li>
+                <li class="col-span-3 flex flex-col items-center">
+                    <img class="mx-auto w-[32px]" src='../assets/icons/banner-user.png' alt="">
+                    <span class="text-[13px]">بیش از 200 شرکت کننده</span>
+                </li>
+                <li class="col-span-3 flex flex-col items-center">
+                    <img class="mx-auto w-[32px]" src='../assets/icons/banner-desktop.png' alt="">
+                    <span class="text-[13px]">بهترین سایت تست آنلاین</span>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="flex justify-center mt-3 lg:hidden text-white">
+    <ul class="bg-[#1F2B26] bg-opacity-70 rounded-[5px] w-5/6 h-[160px] grid grid-cols-12 justify-between items-center">
+                        <li class="col-span-6 flex flex-col items-center">
+                            <img class="w-[20px] md:w-[25px] mb-2" src='../assets/icons/banner-judge.png' alt="" />
+                            <span>بیش از 200 تست</span>
+                        </li>
+                        <li class="col-span-6 flex flex-col items-center">
+                            <img class=" w-[20px] md:w-[25px]  mb-2" src='../assets/icons/banner-clock.png' alt="" />
+                            <span>دسترسی مادام العمر</span>
+                        </li>
+                        <li class="col-span-6 flex flex-col items-center">
+                            <img class="w-[20px] md:w-[25px]  mb-2" src='../assets/icons/banner-user.png' alt="" />
+                            <span>بیش از 200 شرکت کننده</span>
+                        </li>
+                        <li class="col-span-6 flex flex-col items-center">
+                            <img class="w-[20px] md:w-[25px]  mb-2" src='../assets/icons/banner-desktop.png' alt="" />
+                            <span>بهترین سایت تست آنلاین</span>
+                        </li>
+        </ul>
+    </div>
+    </section>
+    <!-- Test Now -->
+    <section class="flex justify-center text-white mt-5">
+      <div class="bg-blueColor grid grid-cols-12 rounded-[20px] h-fit py-4 lg:py-3 w-5/6">
+         <div class='col-span-12 lg:col-span-3 flex justify-center lg:justify-start lg:pr-2 lg:h-[190px] relative'>
+         <img class='object-cover lg:absolute lg:-top-14 mb-4' width='190px' src='../assets/images/yellow-test.png' alt="">
+         </div>
+        <div class='col-span-12 lg:col-span-9 lg:mt-0 px-4 lg:px-0 lg:flex lg:items-center relative'>
+        <div class='lg:pe-12 lg:absolute lg:-right-2'>
+        <h4 class='font-semibold mb-3 text-lg lg:text-2xl'>همین حالا آزمون بدید!</h4>
+          <p class='font-light leading-7 text-justify mb-3 lg:mb-0'>
+           لورم ایپسوم متن ساختگی با تولید سادگی نا مفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی
+          تکنولوژی مورد نیاز و کاربردهای متنوع هدف بهبود ابزار های کاربردی میباشد کتابهای زیادی در شصت وخصصان را میطلبد   
+          </p>
+          <div class='lg-mt-0 flex justify-center lg:justify-end font-medium'>
+              <button class='bg-white transition-all duration-75 hover:scale-105 border-secondaryDarkColor text-secondaryDarkColor rounded-[7px] px-3 py-2 flex gap-2 buttonClick'>
+              <img class='' src='../assets/icons/pencil.png' alt="">
+                  <span>شروع آزمون</span>
+              </button>
+          </div>
+        </div>
+        </div>
+      </div>
+  </section>
+    <!-- Last Lessons -->
+    <section class="flex justify-center">
+        <div class="w-5/6 ">
+          <div class='flex py-10 justify-between'>
+            <h4 class='font-semibold pink-line pinkLine'>آخرین آزمون‌ها</h4>
+            <a href="store.html" class="text-pinkColor flex items-center gap-1 hover:text-pinkColor buttonClick">
+               <span>مشاهده همه</span>
+               <img class='h-3 w-2' src='../assets/icons/next-pink-arrow.png' alt="" />
+            </a>
+         </div>
+             <div class="grid grid-cols-12 gap-4 mb-4">
+              <div class='bg-white border border-blueSecondaryLightColor rounded-[10px] col-span-12 sm:col-span-6 lg:col-span-3 relative font-kalameh'>
+                <span class='absolute z-20 text-[11px] px-2 py-1 top-4 left-0 bg-secondaryLightColor rounded-r-full'>
+                    250 سوال
+                </span>
+               <div class='hover-card cursor-pointer'>
+               <img class="rounded-t-[10px] object-contain w-full" src='../assets/images/judgement.png' alt="" />
+               </div>
+                <div class='p-3'>
+                    <h5 class='bg-secondaryLightColor text-[11px] w-fit p-2 rounded-md mb-2'>عنوان دسته‌بندی درس</h5>
+                    <h4 class='font-semibold text-[12px] text-justify mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='mb-1 text-justify text-[12px]'>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ازصنعت چاپ
+                    و با استفاده از طراحان گرافیک است
+                    </p>
+                    <div class='flex justify-end'>
+                        <div class='flex justify-between w-fit gap-2'>
+                            <del class='font-medium text-[#5E5E5E] mb-2'>
+                                <span class='text-[13px]'>310/000</span>
+                                <span class='text-[11px]'> تومان </span>
+                            </del>
+                            <p class='text-greenColor font-medium text-left mb-2'>
+                                <span class='text-[14px]'>250/000</span>
+                                <span class='text-[12px]'> تومان </span>
+                            </p>
+                        </div>
+                    </div>
+                <button class='w-full border-1 border-greenColor rounded-[5px] h-[35px] flex justify-center items-center transition-colors buttonClick cartCardBtn'>
+                   افزودن به سبد خرید
+                </button>   
+                </div>
+            </div>
+              <div class='bg-white border border-blueSecondaryLightColor rounded-[10px] col-span-12 sm:col-span-6 lg:col-span-3 relative font-kalameh'>
+                <span class='absolute z-20 text-[11px] px-2 py-1 top-4 left-0 bg-secondaryLightColor rounded-r-full'>
+                    250 سوال
+                </span>
+               <div class='hover-card cursor-pointer'>
+               <img class="rounded-t-[10px] object-contain w-full" src='../assets/images/judgement.png' alt="" />
+               </div>
+                <div class='p-3'>
+                    <h5 class='bg-secondaryLightColor text-[11px] w-fit p-2 rounded-md mb-2'>عنوان دسته‌بندی درس</h5>
+                    <h4 class='font-semibold text-[12px] text-justify mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='mb-1 text-justify text-[12px]'>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ازصنعت چاپ
+                    و با استفاده از طراحان گرافیک است
+                    </p>
+                    <div class='flex justify-end'>
+                        <div class='flex justify-between w-fit gap-2'>
+                            <del class='font-medium text-[#5E5E5E] mb-2'>
+                                <span class='text-[13px]'>310/000</span>
+                                <span class='text-[11px]'> تومان </span>
+                            </del>
+                            <p class='text-greenColor font-medium text-left mb-2'>
+                                <span class='text-[14px]'>250/000</span>
+                                <span class='text-[12px]'> تومان </span>
+                            </p>
+                        </div>
+                    </div>
+                <button class='w-full border-1 border-greenColor rounded-[5px] h-[35px] flex justify-center items-center transition-colors buttonClick cartCardBtn'>
+                   افزودن به سبد خرید
+                </button>   
+                </div>
+            </div>
+              <div class='bg-white border border-blueSecondaryLightColor rounded-[10px] col-span-12 sm:col-span-6 lg:col-span-3 relative font-kalameh'>
+                <span class='absolute z-20 text-[11px] px-2 py-1 top-4 left-0 bg-secondaryLightColor rounded-r-full'>
+                    250 سوال
+                </span>
+               <div class='hover-card cursor-pointer'>
+               <img class="rounded-t-[10px] object-contain w-full" src='../assets/images/judgement.png' alt="" />
+               </div>
+                <div class='p-3'>
+                    <h5 class='bg-secondaryLightColor text-[11px] w-fit p-2 rounded-md mb-2'>عنوان دسته‌بندی درس</h5>
+                    <h4 class='font-semibold text-[12px] text-justify mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='mb-1 text-justify text-[12px]'>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ازصنعت چاپ
+                    و با استفاده از طراحان گرافیک است
+                    </p>
+                    <div class='flex justify-end'>
+                        <div class='flex justify-between w-fit gap-2'>
+                            <del class='font-medium text-[#5E5E5E] mb-2'>
+                                <span class='text-[13px]'>310/000</span>
+                                <span class='text-[11px]'> تومان </span>
+                            </del>
+                            <p class='text-greenColor font-medium text-left mb-2'>
+                                <span class='text-[14px]'>250/000</span>
+                                <span class='text-[12px]'> تومان </span>
+                            </p>
+                        </div>
+                    </div>
+                <button class='w-full border-1 border-greenColor rounded-[5px] h-[35px] flex justify-center items-center transition-colors buttonClick cartCardBtn'>
+                   افزودن به سبد خرید
+                </button>   
+                </div>
+            </div>
+              <div class='bg-white border border-blueSecondaryLightColor rounded-[10px] col-span-12 sm:col-span-6 lg:col-span-3 relative font-kalameh'>
+                <span class='absolute z-20 text-[11px] px-2 py-1 top-4 left-0 bg-secondaryLightColor rounded-r-full'>
+                    250 سوال
+                </span>
+               <div class='hover-card cursor-pointer'>
+               <img class="rounded-t-[10px] object-contain w-full" src='../assets/images/judgement.png' alt="" />
+               </div>
+                <div class='p-3'>
+                    <h5 class='bg-secondaryLightColor text-[11px] w-fit p-2 rounded-md mb-2'>عنوان دسته‌بندی درس</h5>
+                    <h4 class='font-semibold text-[12px] text-justify mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='mb-1 text-justify text-[12px]'>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ازصنعت چاپ
+                    و با استفاده از طراحان گرافیک است
+                    </p>
+                    <div class='flex justify-end'>
+                        <div class='flex justify-between w-fit gap-2'>
+                            <del class='font-medium text-[#5E5E5E] mb-2'>
+                                <span class='text-[13px]'>310/000</span>
+                                <span class='text-[11px]'> تومان </span>
+                            </del>
+                            <p class='text-greenColor font-medium text-left mb-2'>
+                                <span class='text-[14px]'>250/000</span>
+                                <span class='text-[12px]'> تومان </span>
+                            </p>
+                        </div>
+                    </div>
+                <button class='w-full border-1 border-greenColor rounded-[5px] h-[35px] flex justify-center items-center transition-colors buttonClick cartCardBtn'>
+                   افزودن به سبد خرید
+                </button>   
+                </div>
+            </div>
+             </div>
+             <div class="mb-4">
+             </div>
+         </div>
+    </section>
+    <!-- About Us -->
+    <section id="aboutUs" class="flex justify-center bg-white py-4">
+        <div class="w-5/6 grid grid-cols-12">
+            <div class='col-span-12 md:col-span-8'>
+              <div class='flex py-10 justify-between'>
+                <h4 class='font-semibold pink-line pinkLine'>درباره ما</h4>
+             </div>
+                <h4 class='font-semibold text-yellowColor mb-2'>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ   
+                </h4>
+                <p class='text-justify text-darkColor leading-6 text-[12px] mb-4'>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون
+                و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع هدف بهبود ابزار های کاربردی میباشد کتابهای زیادی در شصت و سه
+                در صد گذشته، حال و آینده شناخت فراوان در جامعه و متخصصان را میطلبد تا نرم افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی الخصوص طراحان
+                خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. دراین صورت میتوان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ  به پایان
+                رسد وزمان موردنیاز شامل حروف چینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار بگیرد. ایپسوم
+                متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                </p>
+                <div class='flex justify-between w-fit gap-2 mb-4'>
+                    <span class='bg-greenColor text-white w-[125px] rounded-[5px] h-[35px]  flex items-center justify-center'>02256789</span>
+                    <button class='w-[125px] rounded-[5px] h-[35px] flex justify-center items-center transition-colors bg-[#D3D3D3] hover:bg-yellowColor hover:text-[13px] hover:text-white buttonClick '>
+                        اطلاعات بیشتر
+                    </button>  
+                </div>
+            </div>
+            <div class='col-span-12 md:col-span-4'>
+                <img src='../assets/images/male-test.png' alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- Last News -->
+    <section class='flex justify-center'>
+        <div class="flex justify-center mb-4">
+            <div class="w-5/6 grid grid-cols-12 gap-3">
+                <div class='col-span-12 flex pt-10 pb-6 justify-between'>
+                  <h4 class='font-semibold pink-line pinkLine'>آخرین اخبار</h4>
+                  <a href="news.html" class="text-pinkColor flex items-center gap-1 hover:text-pinkColor buttonClick">
+                     <span>مشاهده همه</span>
+                     <img class='h-3 w-2' src='../assets/icons/next-pink-arrow.png' alt="" />
+                  </a>
+               </div>
+              <a href="" class="col-span-12 sm:col-span-6 md:grid grid-cols-12 gap-2 p-2 rounded-[10px] border border-blueSecondaryLightColor hover:text-textBlackColor allCards">
+                <div class='flex md:hidden items-center mb-3'>
+                    <img class='rounded-[10px] h-[170px] object-cover w-full' src='../assets/images/female-journalist.png' alt="">
+                   </div>
+                   <div class='col-span-5 md:col-span-4 hidden md:flex items-center'>
+                    <img class='rounded-[10px] h-[170px] object-cover' src='../assets/images/female-journalist.png' alt="">
+                   </div>
+                   <div class=' md:col-span-8 flex items-center px-2'>
+                    <div>
+                    <h4 class='font-semibold text-[12px] mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='border-dashed border-b pb-3 mb-2 leading-4 text-justify border-b-[#D1D1D1] text-[#5E5E5E] text-[12px]'>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع هدف بهبود ابزار های کاربردی میباشد کتابهای زیادی در شصت و سه در صد گذشته
+                    </p>
+                    <div class='text-[12px] text-[#5E5E5E] flex justify-between w-fit gap-4'>
+                    <span class='flex gap-1'>
+                        <img  class='object-contain w-3' src='../assets/icons/calendar.png' alt="" />
+                       <span>فروردین 1402</span>
+                    </span>
+                    <span class='flex gap-1'>
+                        <img class='object-contain w-3' src='../assets/icons/user.png' alt="" />
+                        <span>نام نویسنده</span>
+                    </span>
+                    </div>
+                    </div>
+                   </div>
+                  </a>
+              <a href="" class="col-span-12 sm:col-span-6 md:grid grid-cols-12 gap-2 p-2 rounded-[10px] border border-blueSecondaryLightColor hover:text-textBlackColor allCards">
+                <div class='flex md:hidden items-center mb-3'>
+                    <img class='rounded-[10px] h-[170px] object-cover w-full' src='../assets/images/female-journalist.png' alt="">
+                   </div>
+                   <div class='col-span-5 md:col-span-4 hidden md:flex items-center'>
+                    <img class='rounded-[10px] h-[170px] object-cover' src='../assets/images/female-journalist.png' alt="">
+                   </div>
+                   <div class=' md:col-span-8 flex items-center px-2'>
+                    <div>
+                    <h4 class='font-semibold text-[12px] mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='border-dashed border-b pb-3 mb-2 leading-4 text-justify border-b-[#D1D1D1] text-[#5E5E5E] text-[12px]'>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع هدف بهبود ابزار های کاربردی میباشد کتابهای زیادی در شصت و سه در صد گذشته
+                    </p>
+                    <div class='text-[12px] text-[#5E5E5E] flex justify-between w-fit gap-4'>
+                    <span class='flex gap-1'>
+                        <img  class='object-contain w-3' src='../assets/icons/calendar.png' alt="" />
+                       <span>فروردین 1402</span>
+                    </span>
+                    <span class='flex gap-1'>
+                        <img class='object-contain w-3' src='../assets/icons/user.png' alt="" />
+                        <span>نام نویسنده</span>
+                    </span>
+                    </div>
+                    </div>
+                   </div>
+                  </a>
+              <a href="" class="col-span-12 sm:col-span-6 md:grid grid-cols-12 gap-2 p-2 rounded-[10px] border border-blueSecondaryLightColor hover:text-textBlackColor allCards">
+                <div class='flex md:hidden items-center mb-3'>
+                    <img class='rounded-[10px] h-[170px] object-cover w-full' src='../assets/images/business-man.png' alt="">
+                   </div>
+                   <div class='col-span-5 md:col-span-4 hidden md:flex items-center'>
+                    <img class='rounded-[10px] h-[170px] object-cover' src='../assets/images/business-man.png' alt="">
+                   </div>
+                   <div class=' md:col-span-8 flex items-center px-2'>
+                    <div>
+                    <h4 class='font-semibold text-[12px] mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='border-dashed border-b pb-3 mb-2 leading-4 text-justify border-b-[#D1D1D1] text-[#5E5E5E] text-[12px]'>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع هدف بهبود ابزار های کاربردی میباشد کتابهای زیادی در شصت و سه در صد گذشته
+                    </p>
+                    <div class='text-[12px] text-[#5E5E5E] flex justify-between w-fit gap-4'>
+                    <span class='flex gap-1'>
+                        <img  class='object-contain w-3' src='../assets/icons/calendar.png' alt="" />
+                       <span>فروردین 1402</span>
+                    </span>
+                    <span class='flex gap-1'>
+                        <img class='object-contain w-3' src='../assets/icons/user.png' alt="" />
+                        <span>نام نویسنده</span>
+                    </span>
+                    </div>
+                    </div>
+                   </div>
+                  </a>
+              <a href="" class="col-span-12 sm:col-span-6 md:grid grid-cols-12 gap-2 p-2 rounded-[10px] border border-blueSecondaryLightColor hover:text-textBlackColor allCards">
+                <div class='flex md:hidden items-center mb-3'>
+                    <img class='rounded-[10px] h-[170px] object-cover w-full' src='../assets/images/business-man.png' alt="">
+                   </div>
+                   <div class='col-span-5 md:col-span-4 hidden md:flex items-center'>
+                    <img class='rounded-[10px] h-[170px] object-cover' src='../assets/images/business-man.png' alt="">
+                   </div>
+                   <div class=' md:col-span-8 flex items-center px-2'>
+                    <div>
+                    <h4 class='font-semibold text-[12px] mb-1'>
+                        لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                    </h4>
+                    <p class='border-dashed border-b pb-3 mb-2 leading-4 text-justify border-b-[#D1D1D1] text-[#5E5E5E] text-[12px]'>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع هدف بهبود ابزار های کاربردی میباشد کتابهای زیادی در شصت و سه در صد گذشته
+                    </p>
+                    <div class='text-[12px] text-[#5E5E5E] flex justify-between w-fit gap-4'>
+                    <span class='flex gap-1'>
+                        <img  class='object-contain w-3' src='../assets/icons/calendar.png' alt="" />
+                       <span>فروردین 1402</span>
+                    </span>
+                    <span class='flex gap-1'>
+                        <img class='object-contain w-3' src='../assets/icons/user.png' alt="" />
+                        <span>نام نویسنده</span>
+                    </span>
+                    </div>
+                    </div>
+                   </div>
+                  </a>
+            </div>
+            </div>
+    </section>
+    <!--  Introduction -->
+    <section id="introduction" class="flex justify-center bg-white py-4">
+            <div class="w-5/6 grid grid-cols-12">
+            <div class='col-span-12 md:col-span-5'>
+                    <img class='w-[75%]' src='../assets/images/female-test.png' alt="" />
+                </div>
+                <div class='col-span-12 md:col-span-7'>
+                    <div class='col-span-12 flex pt-10 pb-6 justify-between'>
+                        <h4 class='font-semibold pink-line pinkLine'>معرفی سامانه</h4>
+                     </div>
+                    <h4 class='font-semibold text-yellowColor mb-2'>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ   
+                    </h4>
+                    <p class='text-justify text-darkColor leading-6 text-[12px] mb-4'>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون
+                    و سطر آنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع هدف بهبود ابزار های کاربردی میباشد کتابهای زیادی در شصت و سه
+                    در صد گذشته، حال و آینده شناخت فراوان در جامعه و متخصصان را میطلبد تا نرم افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی الخصوص طراحان
+                    خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. دراین صورت میتوان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ  به پایان
+                    رسد وزمان موردنیاز شامل حروف چینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار بگیرد. ایپسوم
+                    متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                    </p>
+                        <button class='w-[125px] rounded-[5px] h-[35px] flex justify-center items-center transition-colors bg-[#D3D3D3] hover:text-[13px] hover:bg-yellowColor hover:text-white buttonClick'>
+                            اطلاعات بیشتر
+                        </button> 
+                </div>
+            </div>
+    </section>
+    <!-- Footer -->
+    <section>
+      <div class='bg-greenColor text-white h-fit py-3 lg:h-16 flex items-center justify-center font-light'>
+        <div class="grid grid-cols-12 gap-2 w-5/6">
+        <p class="col-span-12 lg:col-span-6 text-sm text-center lg:flex lg:justify-start font-kalameh">
+            از ساعت 9 صبح الی 23 شب در خدمت شما عزیزان هستیم
+        </p>
+        <p class="col-span-12 sm:col-span-6 lg:col-span-3 text-center text-sm md:text-left">
+            <span class="w-full justify-center items-center flex gap-1">
+                <span>test4k@gmail.com</span>
+                <img class="w-4 object-contain" src="../assets/icons/email.png" alt="">
+            </span>
+            
+        </p>
+        <p class="col-span-12 sm:col-span-6 lg:col-span-3 text-center text-sm md:text-left font-kalameh">
+            <span class="w-full justify-center items-center flex gap-1">
+                <span>09123456789 - 022345678</span>
+                <img class="w-4 object-contain" src="../assets/icons/call.png" alt="">
+            </span>
+        </p>
+        </div>
+    </div>
+    <section class="flex justify-center mt-4 h-fit items-stretch">
+        <div class="w-5/6 grid grid-cols-12">
+        <div class="col-span-12 lg:col-span-6 mb-4">
+            <div class="lg:w-5/6">
+            <img class="w-20 mb-3" src='../assets/images/test4k-logo.png' alt="" />
+            <p class="leading-5 text-[13px] text-justify font-[400]">
+            لورم ایپسوم متن ساختگی با تولید سادگی مفهومی از صنعت چاپ و استفاده از طراحان
+            گرافیک است.چاپگر ها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+            و برای شرایط فعلی تکنولوژی موردنیاز و کاربردهای متنوع
+            </p>
+            <div class="w-24 flex justify-between mt-3">
+           <a href="">
+                <img class="w-10 object-cover" src='../assets/images/enamaad.png' alt="" />
+           </a>
+           <a href="">
+                <img class="w-10 object-cover" src='../assets/images/footer-logo.png' alt="" />
+           </a>
+            </div>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 text-center border-t border-t-blueSecondaryLightColor pt-4 my-4">
+        <p class="text-secondaryDarkColor text-[12px]">
+        لورم ایپسوم متن ساختگی باتولید سادگی نامفهوم از صنعت چاپ با استفاده از طراحان گرافیک است
+        </p>
+        </div>
+        </div>
+        
+    </section>
+    </section>
+  </body>
+<script>
+  $(document).ready(function(){
+        $('#toggleBtn').click(function(){
+            // $('#toggleBtn').toggleClass(' bg-secondaryLightColor')
+            $('#myDiv').toggle()
+            $('#hamburgur').toggle()
+            $('#close').toggle()
+        })
+        $('.drawerHandler').click(function(){
+            $('#drawer').toggle()
+        })
+        $('#editProfileBtn').click(function(){
+            $('#editProfile').toggle()
+        })
+        $('#editProfileBtnLg').click(function(){
+            $('#editProfile').toggle()
+        })
+        $('#logOutBtn').click(function(){
+            $('#logOut').toggle()
+        })
+        $('#logOutBtnLg').click(function(){
+            $('#logOut').toggle()
+        })
+        $('.closeEditProfile').click(function(){
+            $('#editProfile').toggle()
+        })
+        $('.closeLogOut').click(function(){
+            $('#logOut').toggle()
+        })
+        $("#collapseBtn").click(function(){
+         $("#collapse").collapse('toggle'); // toggle collapse
+        });
+
+    })
+</script>
+</html>

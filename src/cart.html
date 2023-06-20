@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css"> -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <link href="../assets/css/css/all.css" rel="stylesheet">
+    <link href="../assets/css/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <script src="../assets/js/js/all.js"></script>
+    <script src="../assets/js/js/bootstrap.bundle.min.js"></script>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <script src="../assets/js/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="../assets/fonts/font awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/styles/fonts-face/kalameh/font-face.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/sslick-theme.css">
+    <title>Cart</title>
+</head>
+<body>
+    <!-- Header -->
+      <nav class='flex justify-center py-[10px] sm:py-4 font-[500]'>
+        <div class='grid w-5/6 grid-cols-12 gap-1 '>
+            <a href='' class='col-span-2 lg:col-span-1 flex items-center '>
+                <img class='w-[60px] sm:w-[70px]' src='../assets/images/test4k-logo.png' alt="" />
+            </a>
+            <ul class='hidden lg:flex col-span-7 lg:col-span-9 xl:col-span-8 flex-wrap gap-4 items-center justify-start ps-3'>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine ' href='index.html'>صفحه اصلی</a>
+                </li>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine'  href='store.html'>فروشگاه</a>
+                </li>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine'  href='news.html'>مجله خبری</a>
+                </li>
+                <li>
+                    <a href="index.html" class='hover:text-pinkColor hoverBottomLine'  >معرفی سامانه</a>
+                </li>
+                <li>
+                    <a href="index.html" class='hover:text-pinkColor hoverBottomLine' >درباره ما</a>
+                </li>
+            </ul>
+            <div class='hidden lg:flex lg:col-span-2 xl:col-span-3  justify-end font-normal'>
+                <div class='flex w-fit justify-between items-center gap-2'>
+                <a href="cart.html" class='rounded-[8px] h-[38px] w-[38px] relative bg-[#F4F4FC] flex items-center justify-center cartButton'>
+                    <span class='bg-pinkColor absolute bottom-1 right-1 pt-1 text-[11px] rounded-full w-[18px] h-[18px] text-white flex items-center justify-center'>3</span>
+                    <img class='h-[20px]' src='../assets/icons/basket.png' alt="" />
+                </a>
+                <div class='rounded-[8px] border-1 border-[#888793] w-[140px] h-[38px] flex justify-center items-center'>
+                    <div class='flex justify-between gap-[5px]'>
+                        <img class='w-[17px]' src='../assets/icons/user.png' alt="" />
+                        <a href="login.html" class='bLButton hover:text-pinkColor'>ورود</a>
+                        <a href="signup.html" class=' hover:text-pinkColor'>عضویت</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class='col-span-10 w-full relative'>
+                <div class='lg:hidden'>
+                    <div class='text-left rounded-t-md'>
+                    <button class='h-12 flex items-start rounded-t-md pt-[10px] justify-end w-full' id="toggleBtn">
+                        <img id="hamburgur" class="w-7 object-contain transition-all" src="../assets/icons/hamburgur.png" alt="">
+                        <img id="close" class="hidden w-5 object-contain transition-all" src="../assets/icons/close.png" alt="">
+                    </button>
+                    </div>
+                <div class='menu right-2 w-full rounded-b-md hidden' id="myDiv">
+                    <ul class="flex flex-col">
+                        <li class="flex ps-[6px] py-[10px] bg-gray-50">
+                            <img class="w-4 pe-[4px] object-contain" src="../assets/icons/user.png" alt="">
+                            <a class='hover:text-pinkColor bLButton ' href="login.html">ورود</a>
+                            <a class='hover:text-pinkColor ps-[5px]' href="signup.html">عضویت</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href='index.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>صفحه اصلی</a>
+                            <a href='store.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>فروشگاه</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href='news.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>مجله خبری</a>
+                        <a href="index.html" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >معرفی سامانه</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href="index.html" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >درباره ما</a>
+                            <a href="cart.html" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >سبد خرید</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Tests -->
+    <section class='bg-[#F4F4F8]'>
+        <div class="flex justify-center">
+            <div class="w-5/6">
+              <div class='flex py-10 justify-between'>
+                <h4 class='font-semibold pink-line pinkLine'>سبد خرید</h4>
+             </div>
+                 <div class="grid grid-cols-12 gap-4">
+                  <div class='bg-white border border-blueSecondaryLightColor rounded-[10px] col-span-12 sm:col-span-6 lg:col-span-3 relative font-kalameh'>
+                    <span class='absolute z-20 text-[11px] px-2 py-1 top-4 left-0 bg-secondaryLightColor rounded-r-full'>
+                        250 سوال
+                    </span>
+                   <div class='hover-card cursor-pointer'>
+                   <img class="rounded-t-[10px] object-contain w-full" src='../assets/images/judgement.png' alt="" />
+                   </div>
+                    <div class='p-3'>
+                        <h5 class='bg-secondaryLightColor text-[11px] w-fit p-2 rounded-md mb-2'>عنوان دسته‌بندی درس</h5>
+                        <h4 class='font-semibold text-[12px] text-justify mb-1'>
+                            لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                        </h4>
+                        <p class='mb-1 text-justify text-[12px]'>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ازصنعت چاپ
+                        و با استفاده از طراحان گرافیک است
+                        </p>
+                        <div class='flex justify-end'>
+                            <div class='flex justify-between w-fit gap-2'>
+                                <del class='font-medium text-[#5E5E5E] mb-2'>
+                                    <span class='text-[13px]'>310/000</span>
+                                    <span class='text-[11px]'> تومان </span>
+                                </del>
+                                <p class='text-greenColor font-medium text-left mb-2'>
+                                    <span class='text-[14px]'>250/000</span>
+                                    <span class='text-[12px]'> تومان </span>
+                                </p>
+                            </div>
+                        </div>
+                    <button class='w-full rounded-[5px] h-[35px] flex justify-center items-center transition-colors buttonClick deleteCard'>
+                        حذف از سبد خرید
+                    </button>   
+                    </div>
+                </div>
+                  <div class='bg-white border border-blueSecondaryLightColor rounded-[10px] col-span-12 sm:col-span-6 lg:col-span-3 relative font-kalameh'>
+                    <span class='absolute z-20 text-[11px] px-2 py-1 top-4 left-0 bg-secondaryLightColor rounded-r-full'>
+                        250 سوال
+                    </span>
+                   <div class='hover-card cursor-pointer'>
+                   <img class="rounded-t-[10px] object-contain w-full" src='../assets/images/judgement.png' alt="" />
+                   </div>
+                    <div class='p-3'>
+                        <h5 class='bg-secondaryLightColor text-[11px] w-fit p-2 rounded-md mb-2'>عنوان دسته‌بندی درس</h5>
+                        <h4 class='font-semibold text-[12px] text-justify mb-1'>
+                            لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                        </h4>
+                        <p class='mb-1 text-justify text-[12px]'>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ازصنعت چاپ
+                        و با استفاده از طراحان گرافیک است
+                        </p>
+                        <div class='flex justify-end'>
+                            <div class='flex justify-between w-fit gap-2'>
+                                <del class='font-medium text-[#5E5E5E] mb-2'>
+                                    <span class='text-[13px]'>310/000</span>
+                                    <span class='text-[11px]'> تومان </span>
+                                </del>
+                                <p class='text-greenColor font-medium text-left mb-2'>
+                                    <span class='text-[14px]'>250/000</span>
+                                    <span class='text-[12px]'> تومان </span>
+                                </p>
+                            </div>
+                        </div>
+                    <button class='w-full rounded-[5px] h-[35px] flex justify-center items-center transition-colors buttonClick deleteCard'>
+                        حذف از سبد خرید 
+                    </button>   
+                    </div>
+                </div>
+                  <div class='bg-white border border-blueSecondaryLightColor rounded-[10px] col-span-12 sm:col-span-6 lg:col-span-3 relative font-kalameh'>
+                    <span class='absolute z-20 text-[11px] px-2 py-1 top-4 left-0 bg-secondaryLightColor rounded-r-full'>
+                        250 سوال
+                    </span>
+                   <div class='hover-card cursor-pointer'>
+                   <img class="rounded-t-[10px] object-contain w-full" src='../assets/images/judgement.png' alt="" />
+                   </div>
+                    <div class='p-3'>
+                        <h5 class='bg-secondaryLightColor text-[11px] w-fit p-2 rounded-md mb-2'>عنوان دسته‌بندی درس</h5>
+                        <h4 class='font-semibold text-[12px] text-justify mb-1'>
+                            لورم ایپسوم متن ساختگی تولید سادگی نامفهوم صنعت
+                        </h4>
+                        <p class='mb-1 text-justify text-[12px]'>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ازصنعت چاپ
+                        و با استفاده از طراحان گرافیک است
+                        </p>
+                        <div class='flex justify-end'>
+                            <div class='flex justify-between w-fit gap-2'>
+                                <del class='font-medium text-[#5E5E5E] mb-2'>
+                                    <span class='text-[13px]'>310/000</span>
+                                    <span class='text-[11px]'> تومان </span>
+                                </del>
+                                <p class='text-greenColor font-medium text-left mb-2'>
+                                    <span class='text-[14px]'>250/000</span>
+                                    <span class='text-[12px]'> تومان </span>
+                                </p>
+                            </div>
+                        </div>
+                    <button class='w-full rounded-[5px] h-[35px] flex justify-center items-center transition-colors buttonClick deleteCard'>
+                       حذف از سبد خرید
+                    </button>   
+                    </div>
+                </div>
+                 </div>
+             </div>
+            </div>
+            <div class=" flex justify-center pb-5">
+                <div class="w-5/6 py-4 px-3 mt-5 rounded-[10px] bg-white">
+                    <div class="w-full flex flex-col md:flex-row items-center md:items-center md:justify-between gap-[10px]">
+                        <div class="flex flex-col gap-[5px]">
+                        <div class="flex gap-2">
+                            <p>قیمت کل سفارش بدون تخفیف</p>
+                            <p>1/200/300</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <p>قیمت کل سفارش با تخفیف</p>
+                            <p>1/100/300</p>
+                        </div>
+                        </div>
+                        <button id="paymentBtn" class="bg-greenColor text-white rounded-[10px] w-[200px] py-2 buttonClick cartCardBtn">پرداخت و ثبت سفارش</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+     <!-- pop up -->
+     <div id="bank">
+     <div id="bankContent" class="">
+        <div class="flex justify-center items-center">
+            <div class="w-full h-full z-10 bg-white shadow-lg shadow-[#B8B8BF] rounded-[6px] p-5">
+                <div class="flex justify-between mb-[20px]">
+                    <p class="font-semibold">تسویه حساب</p>
+                    <button id="closeBank" class="border-2 p-2 border-[#4F4F4F] rounded-full">
+                        <img class="object-contain w-[10px]" src='../assets/icons/close.png' alt=""/>
+                    </button>
+                </div>
+                <div class="flex justify-center">
+                    <form class="w-full" action="">
+                        <div class="flex mb-[10px] h-[55px]">
+                            <input class='outline-none w-full rounded-r-[10px] bg-[#F9F9FA] ps-4 h-[55px] focus:bg-green-100 text-right' placeholder='کد تخفیف خود را وارد نمایید' type='text'/>
+                            <button class='h-full text-white w-[140px] sm:w-[160px] bg-greenColor rounded-l-[10px] text-[16px]'>بررسی</button>
+                        </div>
+                        <div class="flex justify-between font-semibold items-center h-[55px] bg-[#F9F9FA] px-3 mb-[10px]">
+                            <p>مبلغ قابل پرداخت</p>
+                            <p>1/050/000</p>
+                        </div>
+                        <div class="flex justify-center gap-[10px] my-4">
+                            <button class="w-[130px] rounded-[10px] border-2 border-[#707070] ">
+                                <img class="w-full object-contain rounded-[10px]" src='../assets/images/mellat-bank.png' alt=""/>
+                            </button>
+                            <button class="w-[130px] rounded-[10px] border border-[#DDDDDD] ">
+                                <img class="w-full object-contain rounded-[10px]" src='../assets/images/tejarat-bank.png' alt=""/>
+                            </button>
+                            <button class="w-[130px] rounded-[10px] border border-[#DDDDDD] ">
+                                <img class="w-full object-contain rounded-[10px]" src='../assets/images/meli-bank.png' alt=""/>
+                            </button>
+                        </div>
+                        <button class="bg-greenColor text-white w-full rounded-[10px] h-[55px] hover:bg-[#02AA61] text-[16px]">اتصال به درگاه پرداخت</button>
+                    </form>
+                </div>
+                </div>
+        </div>
+     </div>
+   </div>
+    <!-- Footer -->
+    <section>
+      <div class='bg-greenColor text-white h-fit py-3 lg:h-16 flex items-center justify-center font-light'>
+        <div class="grid grid-cols-12 gap-2 w-5/6">
+        <p class="col-span-12 lg:col-span-6 text-sm text-center lg:flex lg:justify-start font-kalameh">
+            از ساعت 9 صبح الی 23 شب در خدمت شما عزیزان هستیم
+        </p>
+        <p class="col-span-12 sm:col-span-6 lg:col-span-3 text-center text-sm md:text-left">
+            <span class="w-full justify-center items-center flex gap-1">
+                <span>test4k@gmail.com</span>
+                <img class="w-4 object-contain" src="../assets/icons/email.png" alt="">
+            </span>
+            
+        </p>
+        <p class="col-span-12 sm:col-span-6 lg:col-span-3 text-center text-sm md:text-left font-kalameh">
+            <span class="w-full justify-center items-center flex gap-1">
+                <span>09123456789 - 022345678</span>
+                <img class="w-4 object-contain" src="../assets/icons/call.png" alt="">
+            </span>
+        </p>
+        </div>
+    </div>
+    <section class="flex justify-center mt-4 h-fit items-stretch">
+        <div class="w-5/6 grid grid-cols-12">
+        <div class="col-span-12 lg:col-span-6 mb-4">
+            <div class="lg:w-5/6">
+            <img class="w-20 mb-3" src='../assets/images/test4k-logo.png' alt="" />
+            <p class="leading-5 text-[13px] text-justify font-[400]">
+            لورم ایپسوم متن ساختگی با تولید سادگی مفهومی از صنعت چاپ و استفاده از طراحان
+            گرافیک است.چاپگر ها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+            و برای شرایط فعلی تکنولوژی موردنیاز و کاربردهای متنوع
+            </p>
+            <div class="w-24 flex justify-between mt-3">
+           <a href="">
+                <img class="w-10 object-cover" src='../assets/images/enamaad.png' alt="" />
+           </a>
+           <a href="">
+                <img class="w-10 object-cover" src='../assets/images/footer-logo.png' alt="" />
+           </a>
+            </div>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 text-center border-t border-t-blueSecondaryLightColor pt-4 my-4">
+        <p class="text-secondaryDarkColor text-[12px]">
+        لورم ایپسوم متن ساختگی باتولید سادگی نامفهوم از صنعت چاپ با استفاده از طراحان گرافیک است
+        </p>
+        </div>
+        </div>
+        
+    </section>
+    </section>
+   
+  </body>
+<script>
+  $(document).ready(function(){
+        $('#toggleBtn').click(function(){
+            // $('#toggleBtn').toggleClass(' bg-secondaryLightColor')
+            $('#myDiv').toggle()
+            $('#hamburgur').toggle()
+            $('#close').toggle()
+        })
+        $('.drawerHandler').click(function(){
+            $('#drawer').toggle()
+        })
+        $('#paymentBtn').click(function(){
+            $('#bank').show()
+        })
+        $('#closeBank').click(function(){
+            $('#bank').hide()
+        })
+        $("#collapseBtn").click(function(){
+         $("#collapse").collapse('toggle'); // toggle collapse
+        });
+
+    })
+</script>
+</html>

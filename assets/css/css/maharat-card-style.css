@@ -1,0 +1,531 @@
+@font-face {
+    font-family: 'KalameRegular';
+    src: url('fonts/KalamehFaNum-Regular.ttf' )format('woff'); 
+}
+@font-face {
+    font-family: 'KalameMedium';
+    src: url('fonts/KalamehFaNum-Medium.ttf')format('woff'); 
+}
+@font-face {
+    font-family: "KalameSemibold";
+    src: url('fonts/KalamehFaNum-SemiBold.ttf')format("woff"); 
+}
+@font-face {
+    font-family: "KalameBold";
+    src: url('fonts/KalamehFaNum-Bold.ttf')format("woff"); 
+}
+/* All */
+body{
+    background-color: #FDFFFF;
+    color: #434242;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'KalameRegular';
+}
+.green{
+    color: #58952A;
+}
+.btn-green{
+    color: white;
+    background-color: #58952A;
+}
+.btn-green:hover{
+    color: white;
+    box-shadow: 2px 2px 10px #3c8a0095;
+}
+a{
+    text-decoration: none;
+}
+.titr{
+    font-weight: bold;
+    font-size: 33px;
+}
+.paragraph{
+    color: #262626b3;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0px 10px 0px;
+}
+.par{
+    font-size: 17px;
+    line-height: 30px;
+}
+/* Header */
+
+.navbar-brand:focus{
+    color: #fff !important;
+}
+.header-background{
+    background-color: #19303be3;
+    color: white;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+.brand-font{
+    color: white;
+    font-weight: 500;
+}
+.brand-font:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
+.nav-link {
+    color: white;
+    }
+    .nav-link:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+.nav-link:focus{
+    color: white;
+}
+.active-header{
+    color: #58952A !important;
+}
+.active-header:hover{
+    color: #58952ad3 !important;
+}
+/* Carousel */
+.par-carousel{
+    font-size: 20px;
+}
+.nxt-prev-btn{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 35px;
+    height: 35px;
+}
+@media (min-width:1200px){
+    .carousel-reboot{
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width:1500px){
+    .space{
+        height: 780px;
+    }
+}
+@media (max-width:1500px){
+    .space{
+        height: 800px;
+    }
+}
+@media (max-width:1300px){
+    .space{
+        height: 650px;
+    }
+}
+@media (max-width:1199px){
+    .space{
+        height: 10px;
+    }
+}
+.carousel-caption {
+    top: 40% !important;
+    bottom: 40% !important;
+    color: #fff;
+}
+.btn-carousel{
+    border: solid #707070 1px;
+    text-decoration: none;
+    border-radius: 10px;
+    display:flex;
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px 20px 10px 20px; */
+}
+.btn-white{
+    background-color: #fff;
+    color: #1B282E;
+}
+.btn-white:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    color: #1B282E;
+}
+/* Cards */
+.box-border{
+    position: relative;
+    border: 2px solid #E8E8E8;
+    border-radius: 20px;
+    padding: 50px 50px 25px 50px;
+    margin-top: 35px;
+}
+.box-border:hover{
+    /* box-shadow: 2px 2px 15px #3c8a0037; */
+    border: 2px solid #d0d0d0;
+}
+.img-border{
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -29px;
+    padding: 10px;
+    border: 2px solid #58952A;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.box-border p{
+    color:#262626b4;
+    font-size: 15px;
+    font-weight: 500;
+}
+.box-border h6{
+    font-size: 18px;
+}
+/* App Download */
+.btn-blue{
+    background-color: #253B46;
+    color: white;
+}
+.btn-blue:hover{
+    color: white;
+    box-shadow: 2px 2px 10px #006695ac;
+}
+/* email/SignUp */
+.signup-div{
+    background-color: #253B46;
+    border-radius: 50px;
+    position: relative;
+    display: inline;
+    padding: 15px;
+}
+
+@media(max-width:1200px){
+    .img-sign{
+        position: absolute;
+        top: -20%;
+        left: 1%;
+        max-width: 37%;
+    }
+    .signup-div{
+        min-height: 300px;
+    }
+    input{
+        padding: 20px 50px;
+        font-size: 17px;
+        width: 350px
+    }
+    form a{
+        top: 10px;
+        left: 10px;
+    }
+}
+@media(max-width:992px){
+    .img-sign{
+        position: absolute;
+        top: -17%;
+        left: 3%;
+        max-width: 42%;
+    }
+    .signup-div{
+        min-height: 300px;
+    }
+    input{
+        padding: 20px 20px;
+        font-size: 16px;
+        width: 280px
+    }
+    
+}
+@media(max-width:768px){
+    .signup-div{
+        min-height: 200px;
+    }
+    .img-sign{
+        position: absolute;
+        top: 0;
+        left: 2%;
+        max-width: 38%;
+    }
+    .paragraph{
+        font-size: 15px;
+    }
+    .titr{
+        font-size: 25px;
+    }
+    input{
+        padding: 15px;
+        font-size: 14px;
+        width: 200px
+    }
+    form a{
+        top: 3px;
+        left: 5px;
+    }
+}
+@media(min-width:1200px){
+    .signup-div{
+        min-height: 400px;
+    }
+    .img-sign{
+        position: absolute;
+        top: -19%;
+        left: 5%;
+        max-width: 35%;
+    }
+    input{
+        padding: 20px 60px;
+        font-size: 18px;
+        width: 450px;
+        height: 70px;
+    }
+    form a{
+        top: 14px;
+        left: 10px;
+    }
+}
+form{
+    position: relative;
+    max-width: fit-content;
+}
+input{
+    border: none;
+    background-color: #fff;
+    border-radius: 15px;
+}
+form a{
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+.bg-footer{
+    background-color: #253B46;
+    color: white;
+    padding: 15px 0px; 
+}
+.phone-call{
+    position: relative;
+    padding-right: 60px;
+    padding-top: 15px;
+}
+.phone-call::before{
+    position: absolute;
+    content: "";
+    background: url(../img/phone-call.png);
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+    right: 0;
+    top: 25%; 
+}
+.location , .phone-number{
+    position: relative;
+    padding-right: 70px;
+    padding-top: 18px;
+}
+.location::before{
+    position: absolute;
+    content: "";
+    background: url(../img/location.png);
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+    right: 0;
+    top: 20%; 
+}
+.phone-number::before{
+    position: absolute;
+    content: "";
+    background: url(../img/phone-number.png);
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+    right: 0px;
+    top: 20%; 
+}
+.gray{
+    color: #ffffffa1;
+    font-size: 16px;
+}
+.txt-footer{
+    color: white;
+    padding-top: 25px;
+    font-weight: 400;
+}
+.footer-option{
+    position: relative;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+.footer-option a{
+    color: white;
+}
+.footer-option a:hover{
+    color: rgba(255, 255, 255, 0.77);
+}
+.footer-option::before{
+    position: relative;
+    content: "";
+    background: url(../img/green-dot.png);
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+    right: -5px;
+    top: 0;
+}
+.footer-titr{
+    font-size: 19px;
+    margin: 20px 0px;
+    font-weight: 500;
+}
+.footer-titr a{
+    color: white;
+}
+.footer-titr a:hover{
+    color: rgba(255, 255, 255, 0.764);
+}
+.par-footer{
+    opacity: 70%;
+    font-weight: 400;
+}
+.footer-border{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.551);
+    border-top: 1px solid rgba(255, 255, 255, 0.551);
+}
+.circle{
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* Accordion */
+.accordion-item{
+    color: #262626a3;
+    border: none !important;
+    /* border-right: dashed 2px #E4E4E4 !important; */
+    padding-right: 15px;
+  }
+button.accordion-button.collapsed{
+    box-shadow: none !important;
+}
+.accordion-button{
+    border-right: dashed 2px #E4E4E4 !important;
+    height: fit-content;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+  .accordion-body{
+    padding-right: 40px;
+  }
+  .accordion{
+--bs-accordion-border-radius: 0rem !important;
+  }
+  .accordion-button:not(.collapsed) {
+    color: black !important;
+    box-shadow: none !important;
+    background-color: transparent!important;
+}
+.accordion-button::after {
+    width: 0 !important;
+    height: 0 !important;
+}
+.accordion-header{
+    padding-bottom: 20px;
+}
+ol {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+li{
+   position: relative;
+}
+.span-number{
+    position: absolute;
+    right: -25px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    z-index: 9;
+    border-radius: 10px;
+    background: #F6F6F6;
+    border: solid 1px #E4E4E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.active-number{
+    background-color: #58952A;
+    color: white;
+}
+/* phone carousel */
+ .phone-carousel{
+    margin: 70px 0px 20px 0px;
+    width: 400px;
+    height: 400px;
+    background-color: #253B46;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.frame-mobile{
+    position: relative;
+}
+.frame-mobile::before{
+    position: absolute;
+    content: "";
+    top: -275px;
+    right: -10px;
+    width: 222px;
+    height: 455px;
+    background: url(../img/mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 20;
+}
+.phone-imgs{
+    position: absolute;
+    top: -220px;
+    right: 0px;
+    border-right: #FDFFFF 16px solid;
+    border-left: #FDFFFF 16px solid;
+}
+.mobile-img{
+    width: 173px;
+}
+
+.download-icon {
+    top: 10px;
+    width: 20px;
+    height: 26px;
+    padding-bottom: 5px;
+}
+.colps-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #262626;
+}

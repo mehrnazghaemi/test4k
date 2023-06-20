@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css">
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <script src="../assets/js/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="../assets/fonts/font awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/styles/fonts-face/kalameh/font-face.css">
+   
+    <title>کنترل پنل</title>
+</head>
+<body>
+    <!-- Header -->
+    <nav class='flex justify-center py-[10px] sm:py-4 font-[500]'>
+        <div class='grid w-5/6 grid-cols-12 gap-1 '>
+            <a href='' class='col-span-2 lg:col-span-1 flex items-center '>
+                <img class='w-[60px] sm:w-[70px]' src='../assets/images/test4k-logo.png' alt="" />
+            </a>
+            <ul class='hidden lg:flex col-span-7 lg:col-span-9 xl:col-span-8 flex-wrap gap-4 items-center justify-start ps-3'>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine ' href='index.html'>صفحه اصلی</a>
+                </li>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine'  href='store.html'>فروشگاه</a>
+                </li>
+                <li>
+                    <a class='hover:text-pinkColor hoverBottomLine'  href='news.html'>مجله خبری</a>
+                </li>
+                <li>
+                    <a href="index.html" class='hover:text-pinkColor hoverBottomLine'  >معرفی سامانه</a>
+                </li>
+                <li>
+                    <a href="index.html" class='hover:text-pinkColor hoverBottomLine' >درباره ما</a>
+                </li>
+            </ul>
+            <div class='hidden lg:flex lg:col-span-2 xl:col-span-3  justify-end font-normal'>
+                <div class='flex w-fit justify-between items-center gap-2'>
+                <a href="store.html" class='rounded-[8px] h-[38px] w-[38px] relative bg-[#F4F4FC] flex items-center justify-center cartButton'>
+                    <span class='bg-pinkColor absolute bottom-1 right-1 pt-1 text-[11px] rounded-full w-[18px] h-[18px] text-white flex items-center justify-center'>3</span>
+                    <img class='h-[20px]' src='../assets/icons/basket.png' alt="" />
+                </a>
+                <div class='rounded-[8px] border-1 border-[#888793] w-[140px] h-[38px] flex justify-center items-center'>
+                    <div class='flex justify-between gap-[5px]'>
+                        <img class='w-[17px]' src='../assets/icons/user.png' alt="" />
+                        <a href="login.html" class='bLButton hover:text-pinkColor'>ورود</a>
+                        <a href="signup.html" class=' hover:text-pinkColor'>عضویت</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class='col-span-10 w-full relative'>
+                <div class='lg:hidden'>
+                    <div class='text-left rounded-t-md'>
+                    <button class='h-12 flex items-start rounded-t-md pt-[10px] justify-end w-full' id="toggleBtn">
+                        <img id="hamburgur" class="w-7 object-contain transition-all" src="../assets/icons/hamburgur.png" alt="">
+                        <img id="close" class="hidden w-5 object-contain transition-all" src="../assets/icons/close.png" alt="">
+                    </button>
+                    </div>
+                <div class='menu right-2 w-full rounded-b-md hidden' id="myDiv">
+                    <ul class="flex flex-col">
+                        <li class="flex ps-[6px] py-[10px] bg-gray-50">
+                            <img class="w-4 pe-[4px] object-contain" src="../assets/icons/user.png" alt="">
+                            <a class='hover:text-pinkColor bLButton ' href="login.html">ورود</a>
+                            <a class='hover:text-pinkColor ps-[5px]' href="signup.html">عضویت</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href='index.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>صفحه اصلی</a>
+                            <a href='store.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>فروشگاه</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href='news.html' class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine'>مجله خبری</a>
+                        <a href="index.html" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >معرفی سامانه</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href="index.html" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >درباره ما</a>
+                            <a href="store.html" class='w-1/2 hover:text-pinkColor transition-all hover:bg-gray-50 hoverLeftLine' >سبد خرید</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- body -->
+    <div class="flex justify-center pt-3 bg-[#F9F9FA]">
+        <div class="w-5/6">
+            <button class="fixed bottom-24 right-0 flex transition-all lg:hidden bg-white py-2 px-[10px] rounded-l-full z-50 drawerHandler hover:px-5 hover:py-5 shadow-lg" type="button" id="drawerBtn">
+                <img class="w-4 object-contain" src="../assets/icons/user.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="bg-[#F9F9FA] py-10 flex justify-center">
+        <div class="w-5/6 relative">
+            <div class="flex flex-col gap-3 md:flex-row ">
+                <div class="hidden w-full md:w-1/4 lg:flex nav flex-column nav-pills gap-3 bg-slate-100" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                     <!-- پروفایل -->
+                    <div class="bg-white flex justify-between px-3 items-center rounded-[10px]">
+                        <div class="flex items-center gap-2">
+                            <div class="relative">
+                                <img class="rounded-full" src="../assets/images/profile-photo.png" alt="">
+                                <div class="absolute bottom-0 right-2 bg-greenColor p-[5px] rounded-full">
+                                    <input class="outline-none hidden" type="file" id="image-upload" name="file" accept=".jpg, .jpeg, .png"/>
+                                    <label class="w-full h-full flex justify-center items-center cursor-pointer" for="image-upload">
+                                        <img class="w-[14px]" src="../assets/icons/camera.png" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                        <span class="flex flex-col gap-1">
+                            <p>سهند موسوی</p>
+                            <p>0922234567</p>
+                        </span>
+                        </div>
+                        <button id="editProfileBtnLg">
+                            <img class="" src="../assets/icons/edit.png" alt="">
+                        </button>
+
+                    </div>
+                    <!-- منوی سمت راست -->
+                    <button class="hover:scale-110 transition-all hover:shadow-sm nav-link active flex gap-2 py-4 bg-white text-textBlackColor items-center hover:text-darkColor" id="v-pills-shop-tab"
+                    data-bs-toggle="pill" data-bs-target="#v-pills-shop"
+                    type="button" role="tab" aria-controls="v-pills-shop" aria-selected="true">
+                        <img class="w-5" src="../assets/icons/Document.png" alt="">
+                        <span>فهرست خرید من</span>
+                    </button>
+                    <button class="hover:scale-110 transition-all nav-link bg-white text-textBlackColor flex gap-2 py-4 items-center hover:text-darkColor" id="v-pills-test-tab" data-bs-toggle="pill" data-bs-target="#v-pills-test" type="button" role="tab" aria-controls="v-pills-test" aria-selected="false">
+                        <img src="../assets/icons/pencil.png" alt="">
+                        <span>شبیه ساز آزمون</span>
+                    </button>
+                    <button class="hover:scale-110 transition-all nav-link bg-white  text-textBlackColor flex gap-2 py-4 items-center hover:text-darkColor" id="v-pills-rules-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rules" type="button" role="tab" aria-controls="v-pills-rules" aria-selected="false">
+                        <img src="../assets/icons/paper.png" alt="">
+                        <span>قوانین مهم آزمونی</span>
+                    </button>
+                    <button class="hover:scale-110 transition-all nav-link bg-white text-textBlackColor flex gap-2 py-4 items-center hover:text-darkColor" id="v-pills-notice-tab" data-bs-toggle="pill" data-bs-target="#v-pills-notice" type="button" role="tab" aria-controls="v-pills-notice" aria-selected="false">
+                        <img src="../assets/icons/message.png" alt="">
+                        <span>اطلاع رسانی</span>
+                    </button>
+                    <button id="logOutBtnLg" type="button" class="hover:scale-110 transition-all bg-white text-textBlackColor flex gap-2 px-3 py-4 items-center" data-toggle="modal" data-target="#exampleModalCenter">
+                        <img src="../assets/icons/log-out.png" alt="">
+                        <span>خروج از حساب</span>
+                    </button>
+                </div>
+                <div class="w-full lg:w-3/4 tab-content text-[12px]" id="v-pills-tabContent">   
+                  <div class="tab-pane fade show active  h-full w-full bg-white rounded-[10px] " id="v-pills-shop" role="tabpanel" aria-labelledby="v-pills-shop-tab">
+                    <!-- فهرست خرید -->
+                   <section class="px-3 py-3">
+                    <div class="bg-white border border-[#CE055D] rounded-[5px] grid grid-cols-12 gap-3 md:gap-2 p-2 ">
+                        <img class="col-span-6 sm:col-span-4 h-24 w-full object-cover lg:col-span-2 rounded-[5px]" src="../assets/images/judgement.png" alt="">
+                        <div class="col-span-6 sm:col-span-4 flex flex-col justify-center lg:col-span-2 gap-1 ">
+                         <span class="text-[#5E5E5E] ">عنوان محصول</span>
+                         <p class="font-[500]">عنوان محصول نوشته شود</p>
+                        </div>
+                        <div class="col-span-6 sm:col-span-4 lg:col-span-2 flex flex-col justify-center gap-1 ">
+                         <span class="text-[#5E5E5E] mb-1">وضعیت مالی</span>
+                         <p class="font-[500]">تسویه شده</p>
+                        </div>
+                        <div class="col-span-6 sm:col-span-4 lg:col-span-2 flex flex-col justify-center gap-1">
+                         <span class="text-[#5E5E5E] mb-1">قیمت کل</span>
+                         <p class="font-[500]">1/250/000 تومان</p>
+                        </div>
+                        <div class="col-span-6 sm:col-span-4 lg:col-span-2 flex flex-col justify-center gap-1">
+                         <span class="text-[#5E5E5E] mb-1">تاریخ انقضا</span>
+                         <p class="font-[500]">1404/02/19</p>
+                        </div>
+                        <div class="col-span-6 sm:col-span-4 lg:col-span-2 flex flex-col justify-center gap-1 dotsLine">
+                         <span class="text-[#5E5E5E]  flex gap-1 mb-1">
+                             <img class="w-4 object-contain" src="../assets/icons/success.png" alt="">
+                             <span>خریداری شده</span>
+                         </span>
+                         <button class="font-[500] flex items-center gap-1" id="collapseBtn" data-toggle="collapse" data-target="#collapse">
+                             <span class="text-pinkColor">مشاهده فاکتور</span>
+                             <img class="h-[10px] object-contain" src="../assets/icons/next-pink-arrow.png" alt="">
+                         </button>
+                      
+                        </div>
+                     </div>
+                   </section>
+                   <!-- تراکنشهای من -->
+                        <section class="hidden h-fit" id="collapse">
+                            <div class="w-full flex px-3 justify-center">
+                                <div class="flex flex-col w-full border border-[#DADADA] rounded-[6px] px-3 py-4 collapseDiv">
+                                    <div class="grid grid-cols-12 items-center gap-4 w-full h-fit ">
+                                           <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex flex-col">
+                                               <span class="text-[#5E5E5E] mb-1">بابت</span>
+                                               <span class="font-semibold">لورم ایپسوم متن ساختگی</span>
+                                           </div>
+                                           <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex flex-col">
+                                               <span class="text-[#5E5E5E] mb-1">شماره پیگیری</span>
+                                               <span class="font-semibold">123456789</span>
+                                           </div>
+                                           <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex flex-col">
+                                               <span class="text-[#5E5E5E] mb-1">تاریخ</span>
+                                               <span class="font-semibold">1402/04/29</span>
+                                           </div>
+                                           <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex flex-col">
+                                               <span class="text-[#5E5E5E] mb-1">مبلغ</span>
+                                               <span class="font-semibold">1/200/000</span>
+                                           </div>
+                                           <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex flex-col">
+                                               <span class="text-[#5E5E5E] mb-1">شماره تراکنش</span>
+                                               <span class="font-semibold">123456789</span>
+                                           </div>
+                                           <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex flex-col">
+                                               <span class="text-[#5E5E5E] mb-1">وضعیت پرداخت</span>
+                                               <span class="font-semibold">موفق</span>
+                                           </div>
+                                    </div>
+                                   </div>
+                            </div>
+                     </section>
+                  </div>
+                  <div class="tab-pane fade h-full w-full bg-white rounded-[10px] " id="v-pills-test" role="tabpanel" aria-labelledby="v-pills-test-tab">
+                    <!-- شبیه ساز آزمون -->
+                    <div class="w-full flex py-5 justify-center">
+                       <div class="flex flex-col">
+                        <div class="flex justify-center gap-4 w-fit h-fit ">
+                            <a href="" class="rounded-[5px] w-fit h-[110px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px] bg-[#E9ECF9] flex flex-col justify-center items-center hover:text-black">
+                                <img class="w-[55px] object-contain mb-3" src="../assets/icons/checklist.png" alt="">
+                                <span class="md:text-sm">آزمون آماده سیستمی</span>
+                            </a>
+                            <a href="" class="rounded-[5px] w-fit h-[110px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px] bg-[#F7F5E7] flex flex-col justify-center items-center hover:text-black">
+                                <img class="w-[55px] object-contain mb-3" src="../assets/icons/adjust.png" alt="">
+                                <span class="md:text-sm">آزمون آماده سیستمی</span>
+                            </a>
+                            <a href="" class="rounded-[5px] px-2 w-fit h-[110px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px] bg-[#E6F4E3] flex flex-col justify-center items-center hover:text-black">
+                                <img class="w-[55px] object-contain mb-3" src="../assets/icons/pie-chart.png" alt="">
+                                <span class="md:text-sm">آزمون آماده سیستمی</span>
+                            </a>
+                        </div>
+                        
+                       </div>              
+                    </div>
+                    <div class="w-full md:px-3 ">
+                        <div class="flex w-full flex-col md:flex-row justify-between items-center">
+                            <p class="md:w-1/2 flex items-center gap-1 mb-4">
+                                <img class="object-contain" width="20px" src="../assets/icons/greenArrow.png" alt="">
+                                <span class="font-semibold text-[16px]">آزمون موردنظر خود را انتخاب کنید</span>
+                            </p>
+                            <form class="w-full md:w-1/2 bg-[#F9F9FA] flex justify-between items-center px-2 search-form rounded-[10px] mb-3">
+                                <span class="flex items-center justify-start">
+                                    <img class="object-contain gap-3" width="20px" src="../assets/icons/search.png" alt="">
+                                <input class="outline-none bg-transparent ps-2" type="text" placeholder="دنبال چی هستی؟">
+                                </span>
+                                <button class="bg-pinkColor text-[14px] text-white h-[40px] w-[130px] rounded-[8px] text-center hover:bg-pink-700 buttonClick">جستجو</button>
+                            </form>
+                        </div>
+                        <div class="grid xl:hidden grid-cols-12 gap-2">
+                            <a href="" class="col-span-6 sm:col-span-4 lg:col-span-3  hover:text-darkColor cursor-pointer">
+                                <div class="relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="" class="col-span-6 sm:col-span-4 lg:col-span-3  hover:text-darkColor cursor-pointer">
+                                <div class="relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="" class="col-span-6 sm:col-span-4 lg:col-span-3  hover:text-darkColor cursor-pointer">
+                                <div class="relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="" class="col-span-6 sm:col-span-4 lg:col-span-3  hover:text-darkColor cursor-pointer">
+                                <div class="relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="hidden xl:grid grid-cols-10 gap-2">
+                            <a href="" class="col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2 hover:text-darkColor">
+                                <div class=" relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] md:p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] md:p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="" class="col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2 hover:text-darkColor">
+                                <div class=" relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] md:p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] md:p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="" class="col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2 hover:text-darkColor">
+                                <div class=" relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] md:p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] md:p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="" class="col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2 hover:text-darkColor">
+                                <div class=" relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] md:p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] md:p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                            <a href="" class="col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2 hover:text-darkColor">
+                                <div class=" relative w-fit h-fit overflow-hidden mx-auto">
+                                    <img class="object-cover rounded-[10px] border-2 border-[#BBBBBB] w-[190px] h-[215px]" src="../assets/images/questionary-form.png" alt="">
+                                <span class="absolute w-7 h-7 text-white flex justify-center items-center bg-pinkColor rounded-full left-3 top-3">250</span>
+                                <div class="absolute overflow-hidden bottom-2 rounded-[10px] w-[92%] bg-[#F5F5F5] hoverUp">
+                                    <p class="">
+                                        <p class="font-semibold text-justify text-[11px] mb-2">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                        <p class="text-justify text-[11px]">
+                                            لورم ایپسوم متن ساختگی با تولید
+                                            سادگی نا مفهوم از صنعت
+                                        </p>
+                                    </p>
+                                    <span class="mt-20 w-full flex justify-center gap-2">
+                                        <span class="bg-greenColor text-white rounded-[5px] w-fit h-fit text-[11px] md:p-1 flex justify-center items-center">250 سوال</span>
+                                    <span class="bg-pinkColor text-white rounded-[5px] h-fit w-fit text-[11px] md:p-1 flex justify-center items-center">250 دقیقه</span>
+                                    </span>
+                                </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- بعد از آزمون -->
+                    <section class="px-1 mt-3">
+                        <div class="border rounded-[7px] px-2 py-4">
+                            <div class="flex justify-between items-center mb-4">
+                                <p class="flex justify-start gap-1 font-semibold">
+                                    <span class="border-l pl-1 ml-1">عنوانی که کاربر انتخاب کرده است</span>
+                                    <span>تعداد کل سوالات: 60</span>
+                                </p>
+                                <span class="bg-[#F4F4F8] w-fit rounded-[7px] text-greenColor px-2 py-1">
+                                    نمره شما: 45 از 60
+                                </span>
+                            </div>
+                            <div class="grid grid-cols-12 gap-3">
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <img class="object-contain" width="15px" src="../assets/icons/Outline-Category.png" alt="">
+                                    <span class="color-[#6C6C6C]">
+                                        نوع آزمون:
+                                    </span>
+                                    <span class="font-semibold">
+                                        انتخابی
+                                    </span>
+                                </div>
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <img class="object-contain" width="15px" src="../assets/icons/Outline-Tick-Square.png" alt="">
+                                    <span class="color-[#6C6C6C]">
+                                        نوع انتخاب:
+                                    </span>
+                                    <span class="font-semibold">
+                                        طبقه بندی شده
+                                    </span>
+                                </div>
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <img class="object-contain" width="15px" src="../assets/icons/Outline-Time-Square.png" alt="">
+                                    <span class="color-[#6C6C6C]">
+                                        مدت زمان آزمون:
+                                    </span>
+                                    <span class="font-semibold">
+                                       60 دقیقه
+                                    </span>
+                                </div>
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <img class="object-contain" width="15px" src="../assets/icons/Outline-Calendar.png" alt="">
+                                    <span class="color-[#6C6C6C]">
+                                        مدت زمان آزمون:
+                                    </span>
+                                    <span class="font-semibold">
+                                       60 دقیقه
+                                    </span>
+                                </div>
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <p class="font-semibold">تعداد سوالات با پاسخ صحیح:</p>
+                                    <span class="bg-greenColor w-[20px] h-[20px] text-white flex justify-center items-center text-[10px] rounded-[3px]">45</span>                                
+                                </div>
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <p class="font-semibold">تعداد سوالات با پاسخ غلط:</p>
+                                    <span class="bg-pinkColor w-[20px] h-[20px] text-white flex justify-center items-center text-[10px] rounded-[3px]">45</span>                                
+                                </div>
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <p class="font-semibold">تعداد سوالات با پاسخ شک‌دار</p>
+                                    <span class="font-semibold">3</span>                                
+                                </div>
+                                <div class="col-span-6 md:col-span-4 xl:col-span-3 flex items-center gap-1">
+                                    <p class="font-semibold">تعداد سوالات بدون پاسخ:</p>
+                                    <span class="font-semibold">2</span>                                
+                                </div>
+                            </div>
+                            <div class="flex justify-center md:justify-end mt-4">
+                                <button class="text-pinkColor flex items-center gap-1 buttonClick">
+                                    <span>مشاهده جزئیات</span>
+                                    <img class="object-contain" width="6px" src="../assets/icons/next-pink-arrow.png" alt="">
+                                </button>
+                               </div>
+                        </div>
+                    </section>
+                    <!-- ساخت آزمون -->
+                    <!-- طبقه بندی شده -->
+                    <section class="px-1 mt-3">
+                        <div class="flex gap-2 mb-3">
+                            <button class="bg-[#F4F4F8] border border-[#D4D4E6] rounded-[7px] py-2 px-3">طبقه‌بندی شده</button>
+                            <button class="bg-[#F4F4F8] rounded-[7px] py-2 px-3">رندم</button>
+                            <button class="bg-[#F4F4F8] rounded-[7px] py-2 px-3">براساس جستجو</button>
+                        </div>
+                        <form class="border rounded-[7px] px-3 py-4">
+                            <input class="w-full rounded-[10px] h-[40px] ps-2 bg-[#F4F4F8] outline-none mb-[10px]" placeholder="عنوان مجموعه آزمون خود را وارد کنید" type="text" name="" id="">
+                            <div class="myRow">
+                                <select class="myColumn bg-[#F4F4F8] ps-2 rounded-[10px] outline-none">
+                                    <option value="نام درس">نام درس</option>
+                                    <option value="نام درس">نام درس</option>
+                                    <option value="نام درس">نام درس</option>
+                                </select>
+                                <select class="myColumn bg-[#F4F4F8] ps-2 rounded-[10px] outline-none" name="" id="">
+                                    <option value="عنوان بخش">عنوان بخش</option>
+                                    <option value="عنوان بخش">عنوان بخش</option>
+                                    <option value="عنوان بخش">عنوان بخش</option>
+                                </select>
+                                <select class="myColumn bg-[#F4F4F8] ps-2 rounded-[10px] outline-none" name="" id="">
+                                    <option value="عنوان فصل">عنوان فصل</option>
+                                    <option value="عنوان فصل">عنوان فصل</option>
+                                    <option value="عنوان فصل">عنوان فصل</option>
+                                </select>
+                                <select class="myColumn bg-[#F4F4F8] ps-2 rounded-[10px] outline-none" name="" id="">
+                                    <option value="عنوان مبحث">عنوان مبحث</option>
+                                    <option value="عنوان مبحث">عنوان مبحث</option>
+                                    <option value="عنوان مبحث">عنوان مبحث</option>
+                                </select>
+                                <input class="myColumn bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات آسان" type="number">
+                                <input class="myColumn bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات متوسط" type="number">
+                                <input class="myColumn bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات سخت" type="number">
+                            </div>
+                            <div class=" bg-[#F4F4F8] rounded-[10px] py-3 px-2 mt-[10px]">
+                                <div class="flex justify-between">
+                                    <h4 class="font-semibold">نام درس</h4>
+                                    <div class="flex gap-2">
+                                        <button><img class="w-[20px] h-[20px] object-contain transition-all hover:scale-125" src="../assets/icons/blue-pen.png" alt=""></button>
+                                        <button><img class="w-[20px] h-[20px] object-contain transition-all hover:scale-125" src="../assets/icons/recylebeen.png" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center sm:justify-start gap-[10px] mt-[10px]">
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات آسان:</span>
+                                        <span>20</span>
+                                    </p>
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات متوسط:</span>
+                                        <span>20</span>
+                                    </p>
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات سخت:</span>
+                                        <span>20</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex mt-3 items-center justify-between">
+                                <div class="flex items-center gap-1">
+                                    <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="" for="flexCheckDefault">
+                                      عدم نمایش سوالات تکراری در آزمون
+                                    </label>
+                                  </div>
+                                  <div class="flex gap-2">
+                                    <button class="h-[40px] w-[40px] bg-[#E5E5EC] rounded-[7px] flex justify-center items-center transition-all hover:bg-[#ddd] buttonClick">
+                                        <img class="w-[10px] object-contain" src="../assets/icons/plus.png" alt="">
+                                    </button>
+                                <button class="h-[40px] px-3 bg-greenColor text-white rounded-[7px] cartCardBtn buttonClick">شروع آزمون</button>
+                                  </div>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- ساخت آزمون -->
+                    <!-- رندم -->
+                    <section class="px-1 mt-3">
+                        <div class="flex gap-2 mb-3">
+                            <button class="bg-[#F4F4F8] rounded-[7px] py-2 px-3">طبقه‌بندی شده</button>
+                            <button class="bg-[#F4F4F8] border border-[#D4D4E6] rounded-[7px] py-2 px-3">رندم</button>
+                            <button class="bg-[#F4F4F8] rounded-[7px] py-2 px-3">براساس جستجو</button>
+                        </div>
+                        <form class="border rounded-[7px] px-3 py-4">
+                            <input class="w-full rounded-[10px] h-[40px] ps-2 bg-[#F4F4F8] outline-none mb-[10px]" placeholder="عنوان مجموعه آزمون خود را وارد کنید" type="text" name="" id="">
+                            <div class="myRow">
+                                <select class="myColumn bg-[#F4F4F8] rounded-[10px] ps-2 outline-none">
+                                    <option value="نام درس">نام درس</option>
+                                    <option value="نام درس">نام درس</option>
+                                    <option value="نام درس">نام درس</option>
+                                </select>
+                                <select class="myColumn bg-[#F4F4F8] rounded-[10px] ps-2 outline-none" name="" id="">
+                                    <option value="عنوان مبحث">عنوان مبحث</option>
+                                    <option value="عنوان مبحث">عنوان مبحث</option>
+                                    <option value="عنوان مبحث">عنوان مبحث</option>
+                                </select>
+                                <input class="myColumn bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات آسان" type="number">
+                                <input class="myColumn bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات متوسط" type="number">
+                                <input class="myColumn bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات سخت" type="number">
+                            </div>
+                            <div class=" bg-[#F4F4F8] rounded-[10px] py-3 px-2 mt-[10px]">
+                                <div class="flex justify-between">
+                                    <h4 class="font-semibold">نام درس</h4>
+                                    <div class="flex gap-2">
+                                        <button><img class="w-[20px] h-[20px] object-contain transition-all hover:scale-125" src="../assets/icons/blue-pen.png" alt=""></button>
+                                        <button><img class="w-[20px] h-[20px] object-contain transition-all hover:scale-125" src="../assets/icons/recylebeen.png" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center sm:justify-start gap-[10px] mt-[10px]">
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات آسان:</span>
+                                        <span>20</span>
+                                    </p>
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات متوسط:</span>
+                                        <span>20</span>
+                                    </p>
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات سخت:</span>
+                                        <span>20</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex mt-3 items-center justify-between">
+                                <div class="flex items-center gap-1">
+                                    <input class="" type="checkbox" value="" id="flexCheck">
+                                    <label class="" for="flexCheck">
+                                      عدم نمایش سوالات تکراری در آزمون
+                                    </label>
+                                  </div>
+                                  <div class="flex gap-2">
+                                    <button class="h-[40px] w-[40px] bg-[#E5E5EC] rounded-[7px] flex justify-center items-center transition-all hover:bg-[#ddd] buttonClick">
+                                        <img class="w-[10px] object-contain" src="../assets/icons/plus.png" alt="">
+                                    </button>
+                                <button class="h-[40px] px-3 bg-greenColor text-white rounded-[7px] cartCardBtn buttonClick">شروع آزمون</button>
+                                  </div>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- ساخت آزمون -->
+                    <!-- براساس جستجو -->
+                    <section class="px-1 mt-3">
+                        <div class="flex gap-2 mb-3">
+                            <button class="bg-[#F4F4F8] rounded-[7px] py-2 px-3">طبقه‌بندی شده</button>
+                            <button class="bg-[#F4F4F8] rounded-[7px] py-2 px-3">رندم</button>
+                            <button class="bg-[#F4F4F8] border border-[#D4D4E6] rounded-[7px] py-2 px-3">براساس جستجو</button>
+                        </div>
+                        <form class="border rounded-[7px] px-3 py-4">
+                            <input class="w-full rounded-[10px] h-[40px] ps-2 bg-[#F4F4F8] outline-none mb-[10px]" placeholder="عنوان مجموعه آزمون خود را وارد کنید" type="text" name="" id="">
+                            <div class="grid grid-cols-12 h-fit p-2 gap-[10px]">
+                                <div class="col-span-6 h-[40px] md:col-span-3 flex bg-[#F4F4F8] rounded-[10px] ps-2">
+                                    <img class="object-contain w-4" src="../assets/icons/search.png" alt="">
+                                    <input class="w-full h-full bg-[#F4F4F8] rounded-[10px] outline-none ps-1 text-right" placeholder="عنوان ماده" type="text">
+                                </div>
+                                <input class="col-span-6 h-[40px] md:col-span-3 bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات آسان" type="number">
+                                <input class="col-span-6 h-[40px] md:col-span-3 bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات متوسط" type="number">
+                                <input class="col-span-6 h-[40px] md:col-span-3 bg-[#F4F4F8] rounded-[10px] outline-none ps-2 text-right" placeholder="تعداد سوالات سخت" type="number">
+                            </div>
+                            <div class=" bg-[#F4F4F8] rounded-[10px] py-3 px-2 mt-[10px]">
+                                <div class="flex justify-between">
+                                    <h4 class="font-semibold">نام درس</h4>
+                                    <div class="flex gap-2">
+                                        <button><img class="w-[20px] h-[20px] object-contain transition-all hover:scale-125" src="../assets/icons/blue-pen.png" alt=""></button>
+                                        <button><img class="w-[20px] h-[20px] object-contain transition-all hover:scale-125" src="../assets/icons/recylebeen.png" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center sm:justify-start gap-[10px] mt-[10px]">
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات آسان:</span>
+                                        <span>20</span>
+                                    </p>
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات متوسط:</span>
+                                        <span>20</span>
+                                    </p>
+                                    <p class="flex flex-col text-center sm:text-right sm:flex-row gap-1">
+                                        <span>تعداد سوالات سخت:</span>
+                                        <span>20</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex mt-3 items-center justify-between">
+                                <div class="flex items-center gap-1">
+                                    <input class="" type="checkbox" value="" id="CheckDefault">
+                                    <label class="" for="CheckDefault">
+                                      عدم نمایش سوالات تکراری در آزمون
+                                    </label>
+                                  </div>
+                                  <div class="flex gap-2">
+                                    <button class="h-[40px] w-[40px] bg-[#E5E5EC] rounded-[7px] flex justify-center items-center transition-all hover:bg-[#ddd] buttonClick">
+                                        <img class="w-[10px] object-contain" src="../assets/icons/plus.png" alt="">
+                                    </button>
+                                <button class="h-[40px] px-3 bg-greenColor text-white rounded-[7px] cartCardBtn buttonClick">شروع آزمون</button>
+                                  </div>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- آزمون خالی -->
+                    <section class="w-full flex py-5 px-3 justify-center">
+                            <div class="flex flex-col">
+                             <div class="flex flex-col items-center gap-4 w-fit h-fit ">
+                                <img class="object-contain w-[400px]" src="../assets/images/empty.png" alt="">
+                                <p>هنوز موردی ثبت نشده است</p>
+                             </div>
+                            </div>
+                    </section>
+                  </div>
+                   <!-- قوانین مهم آزمونی -->
+                   <div class="tab-pane fade h-full w-full bg-white rounded-[10px]" id="v-pills-rules" role="tabpanel" aria-labelledby="v-pills-rules-tab">
+                    <div class="w-full flex py-5 px-3 justify-center">
+                       <div class="flex flex-col">
+                        <div class="flex flex-col items-center gap-4 w-fit h-fit ">
+                            <div class="border border-[#DADADA] rounded-[6px] px-3 py-4">
+                                <div class="flex flex-col md:flex-row justify-between mb-2">
+                                    <p class="flex flex-col lg:flex-row gap-[5px]">
+                                        <span class="font-semibold noticeLine w-fit">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
+                                        <span class="text-greenColor">نام مرجع</span>
+                                    </p>
+                                   <button>
+                                    <img class="w-[20px] h-[20px] object-contain transition-all hover:scale-125" src="../assets/icons/recylebeen.png" alt="">
+                                   </button>
+                                </div>
+                                <p class="text-justify">
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگر ها و است و برای شرایط فعلی تکنولوژی نیاز و کاربرد های متنوع هدف بهبود
+                                    کاربردی میباشد کتابهای فراوان در جامعه و متخصصان را می ‌طلبد تا نرم افزار ها شناخت بیشتری را برای طراحان رایانه ‌ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو زبان فارسی ایجاد کرد
+                                    میتوان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ  به پایان می رسد
+                                </p>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+              </div>
+                  <!-- اطلاع رسانی -->
+                  <div class="tab-pane fade h-full w-full bg-white rounded-[10px] " id="v-pills-notice" role="tabpanel" aria-labelledby="v-pills-notice-tab">
+                        <div class="w-full flex py-5 px-3 justify-center">
+                           <div class="flex flex-col">
+                            <div class="flex flex-col items-center gap-4 w-fit h-fit ">
+                                <div class="border border-[#DADADA] rounded-[6px] px-3 py-4">
+                                    <div class="flex flex-col md:flex-row justify-between mb-2">
+                                        <p class="flex flex-col lg:flex-row gap-1">
+                                            <span class="font-semibold noticeLine w-fit">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
+                                            <span class="text-greenColor">اطلاع رسانی شخصی</span>
+                                        </p>
+                                       <p class="flex gap-1">
+                                        <span class="text-greenColor flex justify-start">
+                                            <span>ساعت:</span>
+                                            <span>15:46</span>
+                                        </span>
+                                        <span class="text-greenColor flex lg:justify-center">
+                                            <span>تاریخ:</span>
+                                            <span> 1402/03/16</span>
+                                        </span>
+                                       </p>
+                                    </div>
+                                    <p class="text-justify">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگر ها و است و برای شرایط فعلی تکنولوژی نیاز و کاربرد های متنوع هدف بهبود
+                                        کاربردی میباشد کتابهای فراوان در جامعه و متخصصان را می ‌طلبد تا نرم افزار ها شناخت بیشتری را برای طراحان رایانه ‌ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو زبان فارسی ایجاد کرد
+                                        میتوان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ  به پایان می رسد
+                                    </p>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- drawer -->
+    <div class="lg:hidden bg-[#F9F9FA] modal" id="drawer">
+        <div class="modal-content">
+            <div class="absolute -top-4 right-[48%]">
+                <div class="flex justify-center">
+                    <button id="closePanel" class="bg-red-500 hover:scale-110 rounded-full transition-all w-fit h-fit px-2 py-[7px] buttonClick">
+                        <img class="w-[14px] object-contain" src="../assets/icons/white-close.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class=" w-full flex nav flex-column gap-3">
+               <div class="bg-white flex justify-between px-3 items-center rounded-[10px]">
+                   <div class="flex items-center gap-2">
+                    <div class="relative">
+                        <img class="rounded-full" src="../assets/images/profile-photo.png" alt="">
+                        <div class="absolute bottom-0 right-2 bg-greenColor p-[5px] rounded-full">
+                            <input class="outline-none hidden" type="file" id="image-upload" name="file" accept=".jpg, .jpeg, .png"/>
+                            <label class="drawerHandler w-full h-full flex justify-center items-center cursor-pointer" for="image-upload">
+                                <img class="w-[14px]" src="../assets/icons/camera.png" alt="">
+                            </label>
+                        </div>
+                    </div>
+                   <span class="flex flex-col gap-1">
+                       <p>سهند موسوی</p>
+                       <p>0922234567</p>
+                   </span>
+                   </div>
+                   <button id="editProfileBtn" class="drawerHandler">
+                       <img src="../assets/icons/edit.png" alt="">
+                   </button>
+
+               </div>
+               <!-- منوی سمت راست -->
+               <button class="drawerHandler nav-link active flex gap-2 py-4 text-textBlackColor items-center transition-all hover:text-darkColor" id="v-pills-shop-tab"
+               data-bs-toggle="pill" data-bs-target="#v-pills-shop"
+               type="button" role="tab" aria-controls="v-pills-shop" aria-selected="true">
+                   <img class="w-5" src="../assets/icons/Document.png" alt="">
+                   <span>فهرست خرید من</span>
+               </button>
+               <button class="drawerHandler nav-link bg-white text-textBlackColor flex gap-2 py-4 items-center hover:text-darkColor" id="v-pills-test-tab" data-bs-toggle="pill" data-bs-target="#v-pills-test" type="button" role="tab" aria-controls="v-pills-test" aria-selected="false">
+                   <img src="../assets/icons/pencil.png" alt="">
+                   <span>شبیه ساز آزمون</span>
+               </button>
+               <button class="drawerHandler nav-link bg-white  text-textBlackColor flex gap-2 py-4 items-center hover:text-darkColor" id="v-pills-rules-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rules" type="button" role="tab" aria-controls="v-pills-rules" aria-selected="false">
+                   <img src="../assets/icons/paper.png" alt="">
+                   <span>قوانین مهم آزمونی</span>
+               </button>
+               <button class="drawerHandler nav-link bg-white text-textBlackColor flex gap-2 py-4 items-center hover:text-darkColor" id="v-pills-notice-tab" data-bs-toggle="pill" data-bs-target="#v-pills-notice" type="button" role="tab" aria-controls="v-pills-notice" aria-selected="false">
+                   <img src="../assets/icons/message.png" alt="">
+                   <span>اطلاع رسانی</span>
+               </button>
+               <button id="logOutBtn" type="button" class="drawerHandler bg-white text-textBlackColor flex gap-2 px-3 py-4 items-center hover:text-darkColor" data-toggle="modal" data-target="#exampleModalCenter">
+                <img src="../assets/icons/log-out.png" alt="">
+                <span>خروج از حساب</span>
+               </button>
+           </div>
+
+
+        </div>
+      </div>
+      <!--edit profile-->
+  <div id="editProfile">
+    <!-- <div class="absolute bg-[#B6B6B6] bg-opacity-70 w-full h-full top-0 right-0 z-0"></div> -->
+    <div id="editProfileContent" >
+        <div class="flex justify-center items-center relative">
+            <div class="z-10 w-5/6 h-fit bg-white shadow-lg shadow-[#B8B8BF] rounded-[6px] p-5">
+                <div class="flex justify-between mb-[20px]">
+                    <p class="font-semibold">ویرایش اطلاعات کاربری</p>
+                    <button class="closeEditProfile border-2 p-2 border-[#4F4F4F] rounded-full">
+                        <img class="object-contain w-[10px]" src="../assets/icons/close.png" alt="">
+                    </button>
+                </div>
+                <div class="flex justify-center">
+                    <form class="w-full" action="">
+                        <div class="relative mb-[10px]">
+                            <input class='outline-none w-full rounded-[10px] bg-[#F9F9FA] ps-4 h-[55px] focus:bg-green-100 text-right' value="نام کاربر" placeholder='نام' type='text'>
+                            <span class='absolute top-0 right-0 h-full w-[8px] bg-greenColor rounded-r-[10px]'></span>
+                        </div>
+                        <div class="relative mb-[10px]">
+                            <input class='outline-none w-full rounded-[10px] bg-[#F9F9FA] ps-4 h-[55px] focus:bg-green-100 text-right' value="نام خانوادگی کاربر" placeholder='نام خانوادگی' type='text'>
+                            <span class='absolute top-0 right-0 h-full w-[8px] bg-greenColor rounded-r-[10px]'></span>
+                        </div>
+                        <div class="relative mb-[20px]">
+                            <img class="absolute top-[36%] right-5 object-contain w-[15px]" src="../assets/icons/fill-phone.png" alt="">
+                            <input class='outline-none w-full rounded-[10px] bg-[#F9F9FA] ps-5 h-[55px] focus:bg-green-100 text-right' disabled value="09223456789" placeholder='شماره موبایل' type='number'>
+                            <span class='absolute top-0 right-0 h-full w-[8px] bg-greenColor rounded-r-[10px]'></span>
+                        </div>
+                        <button class="closeEditProfile bg-greenColor text-white w-full rounded-[10px] h-[55px] hover:bg-[#02AA61]">تایید</button>
+                    </form>
+                </div>
+                </div>
+        </div>
+    </div>
+  </div>
+  <!-- Log Out -->
+  <div id="logOut">
+    <div id="logOutContent">
+        <div class="flex justify-center items-center relative">
+            <div class="z-10 w-5/6 h-fit bg-white shadow-lg shadow-[#B8B8BF] rounded-[6px] p-5">
+                <div class="flex justify-between mb-[20px]">
+                    <p class="font-semibold">خروج از حساب</p>
+                    <button class="closeLogOut border-2 p-2 border-[#4F4F4F] rounded-full">
+                        <img class="object-contain w-[10px]" src="../assets/icons/close.png" alt="">
+                    </button>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-full" action="">
+                        <p class="mb-4 text-[15px]">می‌خواهید خارج شوید؟</p>
+                        <div class="flex gap-[10px]">
+                            <button class="closeLogOut bg-greenColor text-white w-full h-[45px] rounded-[10px] text-center hover:bg-[#02AA61] text-[15px]">خروج</button>
+                        <button class="closeLogOut bg-[#F4F4F8] text-darkColor border h-[45px] border-[#D4D4E6] w-full rounded-[10px] text-center hover:text-black hover:bg-[#D5D5E7] text-[15px]">لغو</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+  </div>
+    <!-- Footer -->
+    <div class='bg-greenColor text-white h-fit py-3 lg:h-16 flex items-center justify-center font-light'>
+        <div class="grid grid-cols-12 gap-2 w-5/6">
+        <p class="col-span-12 lg:col-span-6 text-sm text-center lg:flex lg:justify-start font-kalameh">
+            از ساعت 9 صبح الی 23 شب در خدمت شما عزیزان هستیم
+        </p>
+        <p class="col-span-12 sm:col-span-6 lg:col-span-3 text-center text-sm md:text-left">
+            <span class="w-full justify-center items-center flex gap-1">
+                <span>test4k@gmail.com</span>
+                <img class="w-4 object-contain" src="../assets/icons/email.png" alt="">
+            </span>
+            
+        </p>
+        <p class="col-span-12 sm:col-span-6 lg:col-span-3 text-center text-sm md:text-left font-kalameh">
+            <span class="w-full justify-center items-center flex gap-1">
+                <span>09123456789 - 022345678</span>
+                <img class="w-4 object-contain" src="../assets/icons/call.png" alt="">
+            </span>
+        </p>
+        </div>
+    </div>
+    <section class="flex justify-center mt-4 h-fit items-stretch">
+        <div class="w-5/6 grid grid-cols-12">
+        <div class="col-span-12 lg:col-span-6 mb-4">
+            <div class="lg:w-5/6">
+            <img class="w-20 mb-3" src='../assets/images/test4k-logo.png' alt="" />
+            <p class="leading-5 text-[13px] text-justify font-[400]">
+            لورم ایپسوم متن ساختگی با تولید سادگی مفهومی از صنعت چاپ و استفاده از طراحان
+            گرافیک است.چاپگر ها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+            و برای شرایط فعلی تکنولوژی موردنیاز و کاربردهای متنوع
+            </p>
+            <div class="w-24 flex justify-between mt-3">
+           <a href="">
+                <img class="w-10 object-cover" src='../assets/images/enamaad.png' alt="" />
+           </a>
+           <a href="">
+                <img class="w-10 object-cover" src='../assets/images/footer-logo.png' alt="" />
+           </a>
+            </div>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2 lg:flex lg:justify-end font-[400]">
+            <div class=''>
+            <ul class='mb-3'>
+                <li class='font-semibold text-sm mb-4 pinkLine'>لینک‌های مفید</li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class='mb-3'>
+                    <a href='' class='hover:text-pinkColor text-sm'>شرایط و مقررات</a>
+                </li>
+                <li class='mb-3'>
+                   <a href='' class='hover:text-pinkColor text-sm'> پیشنهادات و انتقادات</a>
+                </li>
+                <li class=''>
+                    <a href='' class='hover:text-pinkColor text-sm'>سوالات متداول</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-span-12 text-center border-t border-t-blueSecondaryLightColor pt-4 my-4">
+        <p class="text-secondaryDarkColor text-[12px]">
+        لورم ایپسوم متن ساختگی باتولید سادگی نامفهوم از صنعت چاپ با استفاده از طراحان گرافیک است
+        </p>
+        </div>
+        </div>
+        
+    </section>
+    <script>
+    $(document).ready(function(){
+        $('#toggleBtn').click(function(){
+            // $('#toggleBtn').toggleClass(' bg-secondaryLightColor')
+            $('#myDiv').toggle()
+            $('#hamburgur').toggle()
+            $('#close').toggle()
+        })
+        $('.drawerHandler').click(function(){
+            $('#drawer').toggle()
+        })
+        $('#editProfileBtn').click(function(){
+            $('#editProfile').toggle()
+        })
+        $('#editProfileBtnLg').click(function(){
+            $('#editProfile').toggle()
+        })
+        $('#logOutBtn').click(function(){
+            $('#logOut').toggle()
+        })
+        $('#logOutBtnLg').click(function(){
+            $('#logOut').toggle()
+        })
+        $('.closeEditProfile').click(function(){
+            $('#editProfile').toggle()
+        })
+        $('.closeLogOut').click(function(){
+            $('#logOut').toggle()
+        })
+        $('#closePanel').click(function(){
+            $('#drawer').hide()
+        })
+        $("#collapseBtn").click(function(){
+         $("#collapse").toggle(); // toggle collapse
+        });
+
+    })
+    </script>
+    
+</body>
+</html>

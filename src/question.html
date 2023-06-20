@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css">
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <script src="../assets/js/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="../assets/fonts/font awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/styles/fonts-face/kalameh/font-face.css">
+    <title>آزمون</title>
+</head>
+<body>
+    <div class="w-full py-3 min-h-screen flex justify-center">
+        <div class="bg-white h-fit py-5 px-3 w-5/6 rounded-[6px]">
+            <div class=" md:flex items-stretch gap-[10px]">
+                <div class="mb-class w-full md:w-3/4 border border-[#DADADA] rounded-[6px] p-3">
+                    <div class="flex justify-between mb-3">
+                        <p class="flex items-center gap-1">
+                            <img class="object-contain" src="../assets/icons/yellow-question.png" alt="">
+                            <span class="font-semibold">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است؟
+                            </span>
+                        </p>
+                        <span class="font-semibold">5/45</span>
+                    </div>
+                    <div class="flex flex-col gap-[10px]">
+                        <label class="container">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                          </label>
+                          
+                          <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                          </label>
+                          
+                          <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                          </label>
+                          
+                          <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                          </label>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/4 border border-[#DADADA] rounded-[6px]">
+                    <div class="w-full h-full relative overflow-hidden flex">
+                        <div class="" id="countdown">
+                            <div class="w-full">
+                                
+                                <div class="mt-16 lg:mt-20" id="countdown-number"></div>
+                                <p class="mt-16">زمان باقی‌‌‌‌‌‌مانده شما</p>
+                            </div>
+                        
+                            <svg class="">
+                                      <circle r="50" cx="100" cy="100"></circle>
+                                    </svg>
+                          </div>  
+                        <p class="absolute top-[52%] left-[48%] md:top-[48%] md:left-[43%] lg:top-[55%] lg:left-[45%] text-[13px] text-[#8C8C8C]">ثانیه</p>
+                    </div>
+                    <div class="text-center pt-14">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex justify-center gap-2 md:justify-end mt-3 lg:-mt-10">
+                <button class="bg-[#eee] px-3 py-2 rounded-[10px]">نمایش پاسخ سوال</button>
+                <button class="bg-greenColor text-white px-3 py-2 rounded-[10px]">سوال بعد</button>
+            </div>
+        </div>
+       
+    </div>
+    <script>
+        let countdownNumberEl = document.getElementById('countdown-number');
+        let countdown = 60;
+
+        countdownNumberEl.textContent = countdown;
+
+        setInterval(function() {
+        countdown = --countdown <= 0 ? 60 : countdown;
+
+        countdownNumberEl.textContent = countdown;
+        }, 1000);
+    </script>
+</body>
+</html>
